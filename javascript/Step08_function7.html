@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_function7.html</title>
+</head>
+<body>
+<h3>함수 테스트</h3>
+<script>
+	/*
+		- 일정시간 지연후에 작업할 내용이 있으면 setTimeout
+		함수를 사용한다.
+		- 지연 시간 : 1/1000초 단위	
+		setTimeout( 함수, 지연시간);
+	*/
+	// 1 초후에 자동으로 호출될 함수 전달 하기
+	// setTimeout(function(){
+	// 	alert("페이지 로딩후 1초가 지났습니다.");
+	// }, 1000);
+
+	// //10 초후에 자동으로 호출될 함수 전달하기
+	// setTimeout(function(){
+	// 	console.log("페이지 로딩후 10초가 지났습니다.");
+	// }, 10000);
+
+	setTimeout(function(){
+		console.log("1");
+	}, 1000)
+</script>
+</body>
+</html>

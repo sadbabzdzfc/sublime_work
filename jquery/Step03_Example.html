@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Example.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			background-color: yellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	// margin-left 를 담은 변수 만들고 0으로 초기화
+	var mLeft=0;
+
+	$(".box").on("click",function(){
+		// mLeft 변수의 값 10 증가 시키기
+		mLeft+=10;
+		// 이벤트가 일어난 요소에 css 적용하기
+		$(this).css("margin-left",mLeft+"px");
+	});
+</script>
+</body>
+</html>

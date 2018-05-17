@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MyPlugin.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div id="one">div3</div>
+<div>div4</div>
+<div>div5</div>
+	<!-- jquery 로딩 -->
+<script src="js/jquery-3.3.1.js"></script>
+	<!-- 플러그인 javascript 로딩 -->
+<script src="js/jquery.gura.js"></script>
+<script>
+	// 플러그인에서 추가된 동작 하기
+	$("#one").gura({msg:"Hello~"});
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_loop3.html</title>
+</head>
+<body>
+<h3>for 문 테스트</h3>
+<script>
+	var members=[];
+	members.push({num:1,name:"김구라"});
+	members.push({num:2,name:"해골"});
+	members.push({num:3,name:"원숭이"});
+
+	//for 문을 이용해서 배열에 저장된 object 의 구조를 콘솔에 출력!
+	for(i=0;i<members.length;i++)
+		console.log(members[i]);
+
+	//for 문을 이용해서 배열에 저장된 object의 num 이라는 방에 저장된 숫자를 콘솔 출력!
+	for(j=0;j<members.length;j++)
+		console.log(members[j].num);
+
+	//for 문을 이용해서 배열에 저장된 object의 name 이라는 방에 저장된 숫자를 콘솔 출력!
+		for(j=0;j<members.length;j++)
+		console.log(members[j].name);
+</script>	
+</body>
+</html>

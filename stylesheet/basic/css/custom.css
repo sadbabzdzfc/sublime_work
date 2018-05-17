@@ -1,0 +1,5 @@
+@charset "utf-8"; /* 인코딩 설정 */
+
+p {
+	font-weight: bold;
+}

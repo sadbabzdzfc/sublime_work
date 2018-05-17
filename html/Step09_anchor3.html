@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step09_anchor3.html</title>
+</head>
+<body>
+<h3>링크를 눌렀을때 javascript 실행</h3>
+<a href="javascript:alert('hello')">눌러보셈</a>
+<a href="javascript:sayHello()">눌러보셈2</a>
+<br>
+<a href="">페이지가 새로 고침되는 링크(사용하지 않음)</a>
+<br>
+<a> href 속성이 없으면 안됨(사용하지않음)></a>
+<br>
+<a href="javascript">어떤 동작도 하지 않는 링크</a>
+<script>
+	var sayHello=function(){
+		document.querySelector("h3").innerText="안녕!";
+	};
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_Example5.html</title>
+	<style>
+		.wrapper{
+			width: 400px;
+			height: 400px;
+			border: 1px solid red;
+			overflow: hidden;
+		}
+		.box{
+			border: 1px solid blue;
+			overflow: auto;
+		}
+		.box img{
+			width: 400px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="box">
+		<img src="images/image1.png"/>
+		<img src="images/image2.png"/>
+		<img src="images/image3.png"/>
+		<img src="images/image4.png"/>
+		<img src="images/image5.png"/>
+	</div>
+</div>
+<button id="prevBtn">&laquo;</button>
+<button id="nextBtn">&raquo;</button>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	var lastIndex=$(".box img").length-1;
+
+	var boxWidth=$(".box img").length*400;
+	// .box 의 폭 지정하기 
+	$(".box").css("width", boxWidth+"px");
+
+	// currentIndex 의 초기값 0 으로 지정 
+	var currentIndex=0;
+
+	// 마우스가 over 되었는지 여부 초기값 false;
+	var isMouserOver=false;
+
+	$(".wrapper").mouseover(function(){
+		isMouserOver=true;
+	});
+	$(".wrapper").mouseout(function(){
+		isMouserOver=false;
+	});
+
+	//자동으로 페이지가 넘어가도록
+	setInterval(function(){
+		//만일 마우스가 over 된 상태이면
+		if(isMouserOver){
+			return; // 함수를 종료 
+		}
+
+		//만일 현재 페이지가 마지막 인덱스라면 
+		if(currentIndex==lastIndex){
+			//0번째 인덱스를 볼수 있도록 
+			currentIndex=0;
+			$(".box").animate({
+				marginLeft:"0px"
+			}, 200);
+
+			return; // 함수 종료 
+		}
+		//인덱스 1 증가 시키고 
+		currentIndex++;
+		//움직이기 
+		$(".box").animate({
+			marginLeft:"-=400px"
+		});
+	}, 1000);
+
+
+	$("#nextBtn").click(function(){
+		//만일 현재 페이지가 마지막 인덱스라면 
+		if(currentIndex==lastIndex){
+			return; // 함수 종료 
+		}
+		//인덱스 1 증가 시키고 
+		currentIndex++;
+		//움직이기 
+		$(".box").animate({
+			marginLeft:"-=400px"
+		});
+	});
+
+	$("#prevBtn").click(function(){
+		//만일 가장 처음 인덱스라면 
+		if(currentIndex==0){
+			return;
+		}
+		//인덱스 1 감소 시키기 
+		currentIndex--;
+		$(".box").animate({
+			marginLeft:"+=400px"
+		});
+	});
+</script>	
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step04_Modal.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h1>Modal 테스트</h1>
+	<button id="showBtn" class="btn btn-primary">모달 띄우기</button>
+
+	<button class="btn btn-info" 
+	data-toggle="modal"
+	data-target="#myModal">모달 띄우기2</button>
+</div>
+<div class="modal fade" id="myModal">
+	<!-- modal-lg  | default | modal-sm -->	
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">모달 닫기</span></button>
+        <h4 class="modal-title">모달의 제목</h4>
+      </div>
+      <div class="modal-body">
+        <p>모달의 내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit possimus velit dicta ex, esse suscipit amet ratione cum rerum aperiam laudantium sint a explicabo earum pariatur dolores doloribus dolorum sapiente.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script>
+	$("#showBtn").click(function(){
+		$("#myModal").modal("show");
+	});
+	/* 
+	   modal 에서 발생하는 이벤트 명
+
+	   1. "show.bs.modal"
+	   2. "shown.bs.modal"
+	   3. "hide.bs.modal"
+	   4. "hidden.bs.modal"
+	*/
+
+	//모달이 완전히 보여 졌을때 실행할 함수 등록
+	$("#myModal").on("shown.bs.modal", function(){});
+	//모달이 완전히 숨겨 졌을떄 실행할 함수 등록
+	$("#myModal").on("hidden.bs.modal", function(){});
+</script>
+</body>
+</html>

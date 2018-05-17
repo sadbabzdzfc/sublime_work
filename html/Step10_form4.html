@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_form4.html</title>
+</head>
+<body>
+<form action="loginAction" id="myForm">
+	<label for="id">아이디</label>
+	<input type="text" id="id" name="id"></label>
+	<label for="pwd">비밀번호</label>
+	<input type="password" id="pwd" name="pwd"></label>
+	<button type="submit">로그인</button>
+</form>
+<script>
+	document.querySelector("#myForm")
+	.addEventListener("submit", function(event){
+		var inputId=document.querySelector("#id").value;
+		if(inputId==""){
+			alert("아이디를 입력 하세요!");
+			event.preventDefault();
+		};
+
+	});
+	document.querySelector("#myForm")
+	.addEventListener("submit", function(event){
+		var inputPwd=document.querySelector("#pwd").value;
+		if(inputPwd==""){
+			alert("비밀번호를 입력하세요!")
+			event.preventDefault();
+		}
+	})
+</script>
+</body>
+</html>

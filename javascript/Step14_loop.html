@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_loop.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div>div5</div>
+<div>div6</div>
+<div>div7</div>
+<div>div8</div>
+<div>div9</div>
+<div>div10</div>
+<button id="changeBtn">바꾸기</button>
+<button id="changeBtn2">바꾸기</button>
+<script>
+	document.querySelector("#changeBtn")
+		.addEventListener("click", function(){
+			// div 의 모든 innerText 를 "김구라" 로바꾸기
+			 for(var i=0;i<5;i++){
+				document.querySelectorAll("div")[i].innerText="김구라"
+			 }
+		});
+	document.querySelector("#changeBtn2")
+	.addEventListener("click",function(){
+		//모든 div 의 참조값을 배열에 담아오기
+		var divs=document.querySelectorAll("div");
+		// div 의 모든 innerText 를 "김구라" 로 바꾸기
+		for(var i=0;i<divs.length;i++){
+			divs[i].innerText="김구라";
+		}
+	});
+</script>
+</body>
+</html>

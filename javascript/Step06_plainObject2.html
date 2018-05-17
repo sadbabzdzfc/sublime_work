@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_plainObject2.html</title>
+</head>
+<body>
+<h3>plain object 테스트</h3>
+<script>
+
+	var mem={
+		num:1,
+	 	name:'김구라',
+	 	addr:'노량진'
+	 };
+
+	 //빈 오브젝트 만들고
+	 var mem2={};
+	 //나중에 필요한 값을 저장할수 있다.
+	 mem2['num']=2;
+	 mem2['name']='해골';
+	 mem2['addr']='행신동';
+
+	 // mem.name 에 저장된 값을 불러와서 변수에 담기
+	 var myName=mem['name'];
+	 // mem.addr 에 저장된 문자열을 콘솔에 출력하기
+	 console.log(mem['addr']);
+
+	 // mem.name 을 수정하기
+	 mem['name']='이정호';
+
+	 // 특정방 삭제
+	 delete mem['addr']; //delete 예약어를 이용해서 삭제 가능
+</script>
+</body>
+</html>

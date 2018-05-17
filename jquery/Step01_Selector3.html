@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_Selector3.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div>div5</div>
+<div>div6</div>
+<div>div7</div>
+<div>div8</div>
+<div>div9</div>
+<div>div10</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	// 짝수번째 div 선택 후 동작
+	$("div:even").css("background-color","yellow");
+	// 홀수번째 div 선택 후 동작
+	$("div:odd").css("background-color","#999");
+	// 첫번째 div 선택 후 동작
+	$("div:first").css("font-weight", "bold");
+	// 마지막 div 선택 후 동작
+	$("div:last").css("font-style", "italic");	
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step18_JSON2.html</title>
+</head>
+<body>
+<ul id="friendList">
+	
+</ul>
+<script>
+	var jsonFriends='["김구라","해골","원숭이"]';
+
+	/*
+		jsonFriends 에 있는 내용을 이용해서 위의
+		ul 요소에 친구 목록을 출력해 보세요.
+	*/
+
+	var friends=JSON.parse(jsonFriends)
+	for(var i=0;i<friends.length;i++){
+		// li 요소를 만들어서
+		var li=document.createElement("li");
+		// innerText 로 이름을 출력하고
+		li.innerText=friends[i];
+		// ul 요소에 추가 하기
+		document.querySelector("#friendList").append(li)
+	};
+</script>
+</body>
+</html>

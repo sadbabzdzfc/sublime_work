@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Example.html</title>
+	<style>
+		img{
+			/* linear, ease-in, ease-out, ease-in-out */
+			transition: margin-left 1s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+<button id="moveBtn">눌러보셈</button>
+<img src="images/kim1.png"/>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("#moveBtn").click(function(){
+		$("img").css("margin-left", "300px");
+	});
+</script>
+</body>
+</html>

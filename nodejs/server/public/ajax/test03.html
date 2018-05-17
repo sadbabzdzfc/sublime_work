@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax/test02.html</title>
+	<link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+	<h3>회원 가입 폼</h3>
+	<form action="/ajax/signup" method="post" id="myForm">
+		<label for="id">아이디</label>
+		<input type="text" name="id" id="id"/>
+		<button id="checkBtn">중복확인</button>
+		<strong id="checkResult"></strong>
+		<br/>
+		<label for="pwd">비밀번호</label>
+		<input type="text" name="pwd" id="pwd"/>
+		<br/>
+		<button type="submit">가입</button>
+		<button type="reset">취소</button>
+	</form>
+</div>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+
+
+	//아이디 중복 확인 여부
+	var isIdchecked=false;
+
+	//체크 버튼을 눌렀을 때 실행할 함수 등록
+	$("#id").keyup(function(event){
+		var id=$("#id").val();
+		$.ajax({
+			url:"/ajax/check_id",
+			method:"post",
+			data:{id:id},
+			success:function(data){
+				/*
+					data 는 {"canUse":true} or {"canUse":false}
+					형식의 JSON 문자열 이다.
+				*/
+				var result=JSON.parse(data); // object로 변환
+				if(result.canUse){
+					$("#checkResult")
+					.text("사용가능")
+					.css("color","green");
+					isIdchecked=true;
+				}else{
+					$("#checkResult")
+					.text("사용불가")
+					.css("color","red");
+					isIdchecked=false;
+				}
+			}
+		})
+	});
+
+	$("#myForm").on("submit", function(){
+
+		if(isIdchecked==false){
+			alert("아이디 중복 확인을 하세요.");
+			return false;
+		}
+	})
+
+	$("#id").on("input", function(){
+		isIdchecked=false;
+		$("#checkResult").text("");
+	});
+</script>
+</body>
+</html>

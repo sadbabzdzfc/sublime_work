@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_conditions.html</title>
+</head>
+<body>
+<h3>단일 if문 테스트</h3>
+<div id="one"></div>
+<script>
+	var isFirst=confirm("처음 방문이면 확인을 누르세요.");
+	console.log(isFirst);
+
+	// 조건부 수행 블럭 구성하기
+	if(isFirst){
+		document.querySelector("#one").innerText="첫 방문을 환영합니다."
+	}
+	console.log("javascript 로딩이 완료 됩니다.");
+
+</script>
+</body>
+</html>

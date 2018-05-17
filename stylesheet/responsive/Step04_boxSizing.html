@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_boxSizing.html</title>
+	<style>
+		/* % 단위를 편하게 사용하기 위해 padding 과
+		border-width 를 컨텐츠의 width 와 height 에
+		포함 되도록 설정 */
+		*{
+			box-sizing: border-box;
+		}
+		.row{
+			background-color: #0f0;
+		}
+		.col{
+			float: left;
+			/* % 단위 활용하기 */
+			width: 50%;
+			/* border-width 와 좌우 padding 이 width
+			에 포함 되어 있다. */
+			border: 1px solid red;
+			padding: 0 15px;
+		}
+		.col:nth-child(1){
+			background-color: yellow;
+		}
+		.col:nth-child(2){
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+<div class="row">
+	<div class="col">column1</div>
+	<div class="col">column2</div>
+</div>
+</body>
+</html>

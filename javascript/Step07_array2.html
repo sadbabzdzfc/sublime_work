@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_array2.html</title>
+</head>
+<body>
+	<div>div1</div>
+	<div= id= "monkey">div2</div>
+	<div>div3</div>
+	<div>div4</div>
+	<div>div5</div>	
+	<button onclick="change()", onmouseout="recover()">change!</button>
+<script>
+	var names=["김구라","해골", "원숭이", "주뎅이", "덩어리"];
+
+	var recover=function(){
+	document.querySelectorAll("div")[0].innerText="div1";
+	document.querySelectorAll("div")[1].innerText="div2";
+	document.querySelectorAll("div")[2].innerText="div3";
+	document.querySelectorAll("div")[3].innerText="div4";
+	document.querySelectorAll("div")[4].innerText="div5";
+};
+
+	var change=function(){
+	document.querySelectorAll("div")[0].innerText=names[0];
+	document.querySelectorAll("div")[1].innerText=names[1];
+	document.querySelectorAll("div")[2].innerText=names[2];
+	document.querySelectorAll("div")[3].innerText=names[3];
+	document.querySelectorAll("div")[4].innerText=names[4];
+};
+
+	//배열에 있는 문자열을 5개의 div 의 innerText 로 순서대로 넣어 보세요
+
+</script>
+</body>
+</html>

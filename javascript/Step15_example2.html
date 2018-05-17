@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step15_example2.html</title>
+</head>
+<body>
+<h3>문서 객체 조작 테스트</h3>
+<ul>
+	<li>하나 <button>x</button></li>
+	<li>두울 <button>x</button></li>
+	<li>세엣 <button>x</button></li>
+</ul>
+<script>
+
+	//모든 버튼의 참조값을 배열에 담아오기 
+	var buttons=document.querySelectorAll("button");
+
+	//배열에 담긴 모든 버튼에 이벤트 리스너 함수 등록하기
+	for(var i=0;i<buttons.length;i++){
+		buttons[i].addEventListener("click",function(){
+			//클릭 이벤트가 일어난 바로 그 버튼의 부모 요소 제거
+			this.parentElement.remove();
+		});
+	}
+
+	// li 요소 만들기
+	var li=document.createElement("li");
+	// innerText출력
+	li.innerText="네엣 ";
+	// button 요소 만들기
+	var button=document.createElement("button");
+	// button 에 innerText 넣기
+	button.innerText="x";
+	// button에 click 리스너 넣기
+	button.addEventListener("click",function(){
+		var isDelete=confirm("정말로 삭제 하시겠습니까?");
+		if(isDelete){
+			this.parentElement.remove();
+		};
+	});
+	// li 에 button 요소 추가하기
+	li.append(button);
+	// ul 에 li 요소 추가하기
+	document.querySelector("ul").append(li);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_form2.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h3>인라인 폼</h3>
+	<form action="" class="form-inline">
+		<div class="form-group">
+			<label for="id">아이디</label>
+			<input type="text" class="form-control" id="id"/>
+		</div>
+		<div class="form-group">
+			<label for="pwd">비밀번호</label>
+			<input type="text" class="form-control" id="pwd"/>
+		</div>
+		<button type="submit" class="btn btn-primary">로그인</button>
+	</form>
+
+	<h3>수령 폼</h3>
+	<form action="" class="form-horizontal">
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="email">이메일</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="email"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="phone">전화번호</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="phone"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-9 col-sm-offset-3">
+				<label for="">
+					<input type="checkbox"/>저장
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-9 col-sm-offset-3">
+				<button type="submit" class="btn btn-primary">가입</button>
+			</div>
+		</div>
+	</form>
+</div>
+</body>
+</html>

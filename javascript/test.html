@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test.html</title>
+</head>
+<body>
+<input type="text"/>
+<button onclick="outPrint()">출력하기</button>
+<div></div>
+<script>
+	/*
+		[ 개발자 테스트 ] 실습 문제
+
+		위의 input 요소에 문자열을 입력하고 출력하기 버튼을 
+		눌렀을때 입력한 문자열을 div 요소의 innerText 로 출력하는
+		javascript 를 작성해 보세요.
+	*/
+	var outPrint=function(){
+		var num=document.querySelector("input").value;
+		document.querySelector("div").innerText=num;
+	}
+</script>	
+</body>
+</html>

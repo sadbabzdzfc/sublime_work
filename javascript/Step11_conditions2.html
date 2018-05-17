@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_conditions2.html</title>
+</head>
+<body>
+<h3>양자 택일의 if 문 구성 테스트</h3>
+<div id="one"></div>
+<script>
+	var isFirst=confirm("첫 방문이면 확인을 누르세요");
+
+	if(isFirst){
+		document.querySelector("#one").innerText=" 첫 방문을 환영 합니다.";
+	}else{
+		document.querySelector("#one").innerText=" 다시 방문해 주셔서 감사 합니다.";
+	}
+</script>
+</body>
+</html>

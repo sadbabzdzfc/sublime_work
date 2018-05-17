@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_GridSystem2.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.container{
+			border: 1px solid red;
+		}
+		.row{
+			border: 1px dotted blue;
+		}
+		.row > div{
+			border: 1px solid orange;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h3>하나의 행을 두개의 칼럼으로 구성</h3>
+	<div class="row">
+		<div class="col-xs-6">칼럼1</div>
+		<div class="col-xs-6">칼럼2</div>
+	</div>
+	<h3>하나의 행을 세개의 칼럼으로 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">column1</div>
+		<div class="col-xs-4">column2</div>
+		<div class="col-xs-4">column3</div>
+	</div>
+	<h3>4:8 비율의 칼럼 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">4</div>
+		<div class="col-xs-8">8</div>
+	</div>
+	<h3>4:8 비율의 side 와 main 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">
+			<h3>side 컨텐츠</h3>
+			<ul>
+				<li>하나</li>
+				<li>두울</li>
+				<li>세엣</li>
+			</ul>
+		</div>
+		<div class="col-xs-8">
+			<h3>main 컨텐츠</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quam voluptatem error quaerat deleniti nisi sapiente vel voluptatibus officia mollitia eaque quis, dolorum, totam eveniet assumenda minima ea quae obcaecati.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

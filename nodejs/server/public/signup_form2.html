@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>signup_form2.html</title>
+</head>
+<body>
+<h3>회원가입 폼입니다.</h3>
+<form action="/signup" method="post" id="myForm">
+	<label for="email">이메일</label>
+	<input type="text" id="email" name="email">
+	<label for="pwd">비밀번호</label>
+	<input type="password" id="pwd" name="pwd">
+	<button type="submit">가입</button>
+	<button type="reset">취소</button>
+</form>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	//폼 제출 버튼을 눌렀을때 발생하는 이벤트 처리
+	$("#myForm").on("submit", function(){
+		// 폼에 입력한 정보 읽어오기
+		var email=$("#email").val();
+		var pwd=$("#pwd").val();
+		// ajax 기능을 이용해서 서버에 전송하기
+		$.ajax({
+			url:"/signup",
+			method:"post",
+			data:{email:email, pwd:pwd},
+			success:function(data){
+				alert(data);
+			}
+		});
+
+		return false; // 폼 제출 막기
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Example2.html</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		.bounceInDown{
+			/* 애니메이션 적용 시간 바꾸고 싶으면 ...*/
+			animation-duration: 5s;
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="inputMsg">
+<button id="addBtn">추가</button>
+<ul id="msgList">
+	
+</ul>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("#addBtn").click(function(){
+		// 입력한 문자열
+		var msg=$("#inputMsg").val()
+		// li 요소를 만들어서 text 추가후 ul 에 append
+		$("<li/>")
+		.text(msg)
+		.appendTo("#msgList")
+		.addClass("animated bounceInDown");
+	});
+</script>
+</body>
+</html>

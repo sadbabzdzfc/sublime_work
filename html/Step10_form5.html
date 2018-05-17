@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_form5.html</title>
+</head>
+<body>
+<form action="">
+	<label for="nick">별명</label>
+	<input type="text" id="nick" name="nick" placeholder="별명입력..."/>
+	<br>
+	<label for="lunch">점심메뉴</label>
+	<select name="lunch" id="lunch" multiple="multiple">
+		<option value="">선택</option>
+		<option value="삼각김밥">삼각김밥</option>
+		<option value="사발면">사발면</option>
+		<option>샌드위치</option>
+		<option>바나나</option>
+		<!-- 같은 문자열이면 value를 안써도 된다. --> 
+	</select>
+	<br>
+	<label for="coffee">커피메뉴</label>
+	<select name="coffee" id="coffee">
+		<!-- optgroup 요소를 이용해서 옵션에 그룹을 부여할 수 있다.  -->
+		<optgroup label="에스프레소">
+			<option>카페 아메리카노</option>
+			<option>카페 라떼</option>
+			<option>카페 모카</option>
+		</optgroup>
+		<optgroup label="프라프치노">
+			<option>커피 프라프치노</option>
+			<option>모카 프라프치노</option>
+			<option>카라멜 프라프치노</option>
+		</optgroup>
+	</select>
+	<!-- button type="submit" 과 input type="submit" 은 같다 -->
+	<button type="submit">주문</button>
+	<input type="submit" value="주문">
+	<!-- 	button type="reset" 과 input type="reset" 은 같다 -->
+	<button type="reset">취소</button>
+	<input type="reset" value="취소">
+</form>
+</body>
+</html>

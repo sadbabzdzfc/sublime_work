@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step04_Modal2.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<button class="btn btn-info" 
+	data-toggle="modal"
+	data-target="#myModal">모달 띄우기2</button>
+</div>
+
+<div class="modal fade" id="myModal">
+	<!-- modal-lg  | default | modal-sm -->	
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">모달 닫기</span></button>
+        <h4 class="modal-title">모달의 제목</h4>
+      </div>
+      <div class="modal-body">
+        <p>모달의 내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit possimus velit dicta ex, esse suscipit amet ratione cum rerum aperiam laudantium sint a explicabo earum pariatur dolores doloribus dolorum sapiente.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script>
+	// modal 의 옵션을 javascript 로 전달
+	$("#myModal").modal({
+		backdrop:false, /*backdrop 여부 */
+		show:false /* 로딩 시점에 modal 띄울지 여부 */
+	});
+</script>
+</body>
+</html>

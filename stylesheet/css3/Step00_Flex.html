@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  height: 100px;
+  /*flex-direction 스택하려는 방향 column| row| reverse*/
+  /*  flex-wrap 줄바꿈 여부 wrap| nowrap|(d) reverse*/
+  /*  flex-flow== wrap, dir 모두 설정*/
+ /* justify-content 항목 정렬 center|start|around|between */
+  /*align-items:;*/
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1>The align-content Property</h1>
+
+<p>The "align-content: space-between;" displays the flex lines with equal space between them:</p>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>  
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>  
+  <div>10</div>
+</div>
+
+</body>
+</html>

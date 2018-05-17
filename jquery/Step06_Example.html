@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_Example.html</title>
+	<style>
+		#msgList li:hover{
+			background-color: yellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="inputMsg"/>
+<button id="sendBtn">전송</button>
+<ul id="msgList">
+	<li>하나</li>
+	<li>두울</li>
+
+</ul>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("#sendBtn").click(function(){
+		//입력한 문자열을 읽어오기
+		var msg=$("#inputMsg").val()
+		// li 요소를 만들어서 text 출력 후 추가하기
+		$("<li/>").text(msg).appendTo("#msgList")	
+		.on("click",function(){// 새로 추가된 요소에 이벤트 처리
+			alert($(this).text());
+		});
+	});
+
+	$("#msgList li").on("click",function(){
+		alert($(this).text());
+	});
+
+</script>
+</body>
+</html>

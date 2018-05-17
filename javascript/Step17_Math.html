@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step17_Math.html</title>
+</head>
+<body>
+<button id="one">0이상 1미만 랜덤한 실수 발생시키기</button><br/>
+<button id="two">0이상 10미만 랜덤한 실수</button><br>
+<button id="three">0이상 100미만 랜덤한 실수</button><br>
+<button id="four">0이상 100미만 랜덤한 정수</button><br>
+<button id="five">0이상 2이하 랜덤한 정수</button><br>
+<button id="six">1이상 45이하 랜덤한 실수</button><br>
+<button id="seven">-25이상 25이하 랜덤한 실수</button>
+<p id="result"></p>
+<script>
+	document.querySelector("#one")
+		.addEventListener("click", function(){
+			var ranNum=Math.random();
+			document.querySelector("#result").innerText=ranNum;
+		});
+	document.querySelector("#two")
+		.addEventListener("click", function(){
+			var ranNum=Math.random()*10;
+			document.querySelector("#result").innerText=ranNum;
+		});
+	document.querySelector("#three")
+		.addEventListener("click", function(){
+			var ranNum=Math.random()*100;
+			document.querySelector("#result").innerText=ranNum;
+		});
+	document.querySelector("#four")
+		.addEventListener("click", function(){
+			var ranNum=parseInt(Math.random()*100);
+			document.querySelector("#result").innerText=ranNum;
+		});
+	document.querySelector("#five")
+		.addEventListener("click", function(){
+			var ranNum=parseInt(Math.random()*3);
+			document.querySelector("#result").innerText=ranNum;
+		});
+		"달려요" 달려요 
+	document.querySelector("#six")
+		.addEventListener("click", function(){
+			var ranNum=parseInt(Math.random()*45)+1;
+			document.querySelector("#result").innerText=ranNum;
+		});
+	document.querySelector("#seven")
+		.addEventListener("click", function(){
+			var ranNum=parseInt(Math.random()*51)-25;
+			document.querySelector("#result").innerText=ranNum;
+		});
+</script>
+</body>
+</html>

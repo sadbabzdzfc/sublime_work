@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_hexagon.html</title>
+	<style>
+	.wrapper{
+		perspective: 500px;
+		perspective-origin: 50% 50%;
+		margin-top: 200px;
+		border: 1px solid red;
+	}
+	.cube{
+		transform-style: preserve-3d;
+		transform-origin: 50% 50%;
+		position: relative;
+		width: 400px;
+		height: 400px;
+		margin: 0 auto; /* 가운데 정렬 */
+		transition: all 0.5s ease-out;
+		/* 뒤로 346px 밀어 넣기 */
+		transform: translateZ(-346px);
+	}
+	.cube > div{
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		opacity: 0.6;
+		background-color: #2e272f;
+	}
+	.cube img{
+		width: 400px;
+		height: 400px;
+	}
+	.cube > div:nth-child(1){
+		transform: translateZ(346px);
+	}
+	.cube > div:nth-child(2){
+		transform: rotateY(60deg) translateZ(346px);
+	}
+	.cube > div:nth-child(3){
+		transform: rotateY(120deg) translateZ(346px);
+	}
+	.cube > div:nth-child(4){
+		transform: rotateY(180deg) translateZ(346px);
+	}
+	.cube > div:nth-child(5){
+		transform: rotateY(240deg) translateZ(346px);
+	}
+	.cube > div:nth-child(6){
+		transform: rotateY(300deg) translateZ(346px);
+	}
+	.cube:hover{
+		transform: translateZ(-346px) rotateX(-80deg);
+	}
+	.control{
+		width: 400px;
+		margin: 0 auto;
+		border: 1px solid blue;
+	}
+	#nextBtn{
+		float: right;
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="cube">
+		<div><img src="images/image1.png"></div>
+		<div><img src="images/image2.png"></div>
+		<div><img src="images/image3.png"></div>
+		<div><img src="images/image4.png"></div>
+		<div><img src="images/image5.png"></div>
+		<div><img src="images/image6.png"></div>
+	</div>
+</div>
+<div class="control">
+	<button id="prevBtn">Prev</button>
+	<button id="nextBtn">Next</button>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+
+	// .wrapper div 의 y 축 회전값을 저장할 변수 
+	var rY=0;
+
+	//이전 버튼을 눌렀을때 
+	$("#prevBtn").click(function(){
+		rY += 60;
+		rotate();
+	});
+	//다음 버튼을 눌렀을때 
+	$("#nextBtn").click(function(){
+		rY -= 60;
+		rotate();
+	});
+
+	function rotate(){
+		$(".cube").css("transform", "translateZ(-346px) rotateY("+rY+"deg)");
+	}
+
+
+  function getAngleNtz(n, width) {
+    var angle = Math.round(360 / n);
+    var tz = Math.round((width / 2) / Math.tan((angle * Math.PI) / (2 * 180)));
+    var obj = {
+      angle: angle,
+      tz: tz
+    };
+    return obj;
+  }
+
+</script>	
+</body>
+</html>

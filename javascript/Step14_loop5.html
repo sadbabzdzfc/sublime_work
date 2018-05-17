@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_loop5.html</title>
+</head>
+<body>
+<h3>forEach() 테스트</h3>
+<script>
+	var members=[];
+	members.push({num:1,name:"김구라"});
+	members.push({num:2,name:"해골"});
+	members.push({num:3,name:"원숭이"});
+
+	//forEach()를 이용해서 배열에 저장된 object 의 구조를 콘솔에 출력하기
+
+	members.forEach(function(item){
+		console.log(item)
+	});
+
+	members.forEach(function(item){
+	console.log(item.num)
+	});
+
+	members.forEach(function(item){
+	console.log(item.name)
+	});
+</script>
+</body>
+</html>

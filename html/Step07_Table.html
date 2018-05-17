@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_Table.html</title>
+</head>
+<body>
+<h3>표(table) 형식으로 정보를 출력하기</h3>
+<table border="1" cellspacing="0">
+	<!-- caption 요소에는 표의 제목을 적는다. -->
+	<caption>회원 목록입니다.</caption>
+	<!-- 칼럼의 개수만큼 colgroup 요소안에 col 요소를 나열한다.-->
+	<colgroup>
+		<col width="50" />
+		<col width="100" />
+		<col width="200" />
+	</colgroup>	
+	<!-- thead 에는 칼럼의 이름을 명시한다. -->
+	<thead>
+		<!-- tr 은 table row를 의미한다 (행) -->
+		<tr>
+			<!-- 칼럼의 갯수 만큼 th 를 만들고 칼럼명을 적는다. -->
+			<th>번호</th>
+			<th>이름</th>
+			<th>주소</th>
+		</tr>
+	</thead>
+	<!-- tbody 에는 표에 표시할 실제 정보를 명시 한다. -->
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>김구라</td>
+			<td>노량진</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>해골</td>
+			<td>행신동</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>원숭이</td>
+			<td>상도동</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

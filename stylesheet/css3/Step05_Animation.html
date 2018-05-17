@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Animation.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			border:1px solid red;
+		}
+		.box:hover{
+			/* 적용할 애니메이션 keyframes 의 이름 */
+			animation-name: myAni;
+			animation-duration: 3s;
+			animation-timing-function: ease-out;
+			animation-iteration-count: 3;
+			/* 애니메이션 진행 방향
+				normal | reverse | alternate */
+			animation-direction: alternate;
+		}
+		/* 애니메이션 keyframes 정의하기 */
+		@keyframes myAni{
+			0%{
+				background-color: #0f0;
+				transform: rotate(0deg) scale(1.0);
+			}
+			50%{
+				background-color: #f0f;
+				transform: rotate(180deg) scale(0.5);
+			}
+			100%{
+				background-color: #ff0;
+				transform: rotate(360deg) scale(1.5);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>animation 테스트</h1>
+	<div class="box">box</div>
+</div>
+</body>
+</html>

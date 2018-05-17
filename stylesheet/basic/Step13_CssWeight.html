@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step13_CssWeight.html</title>
+	<style>
+		/* 단계적으로 적용되는 css 법칙 확인하기 */
+		p{
+			background-color: red;
+
+		}
+		/* 선택자의 가중치(구체적)가 동일 하다면 나중에 정의한 css가 적용된다. */
+		p{
+			background-color: yellow;
+		}
+		/* !important>inline css>id>class>element 
+	</style>
+</head>
+<body>
+<p class="myClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga, est, voluptatibus soluta ea voluptates, accusantium nesciunt at animi facere sit, harum provident minus qui quisquam aliquam eligendi tenetur voluptate!</p>
+</body>
+</html>

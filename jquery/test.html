@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			background-color: yellow; 
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>	
+<div class="box"></div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	/* 
+		jquery 를 활용해서 위에 있는 노란색의 div를 클릭할때 마다
+		클릭한 1초에동안 우측으로 100px 씩 이동하도록 프로그래밍 해 보세요. 
+	*/
+
+	$(".box").click(function(){
+		$(this).animate({
+			duration:1000,
+			marginLeft: "+=100px"
+		})
+	});
+</script>		
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_plainObject3.html</title>
+</head>
+<body>
+<script>
+	// a 와 b 의 차이 인지하기
+	var a={num:1}; // object type
+	var b='{num:1}'; // string type
+
+	var mem={num:1, name:'김구라'};
+	// 아래 코드는 어떤 의미 일까?
+	var mem2=mem; // 참조값 복사해주기
+
+	var mem3={num:1, name:'김구라'};
+
+	var result1=mem==mem2; // true
+
+	var result2=mem2==mem3; // false
+
+</script>
+</body>
+</html>

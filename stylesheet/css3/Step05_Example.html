@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Example.html</title>
+	<style>
+		.drop-ani{
+			animation: dropAni 0.4s ease-out;
+		}
+
+		@keyframes dropAni{
+			0%{
+				transform: translateY(-100px);
+			}
+			100%{
+				transform: translateY(0px);
+			}
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="inputMsg">
+<button id="addBtn">추가</button>
+<ul id="msgList">
+	
+</ul>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("#addBtn").click(function(){
+		// 입력한 문자열
+		var msg=$("#inputMsg").val()
+		// li 요소를 만들어서 text 추가후 ul 에 append
+		$("<li/>")
+		.text(msg)
+		.appendTo("#msgList")
+		.addClass("drop-ani");
+	});
+</script>
+</body>
+</html>

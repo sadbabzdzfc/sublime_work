@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step13_event2.html</title>
+</head>
+<body>
+<h3>이벤트 객체 사용 예제</h3>
+<input type="text" id="inputMsg"/>
+<p id="myConsole"></p> 
+<script>
+	document.querySelector("#inputMsg")
+	.addEventListener("keyup",function(event){
+		// 이벤트 객체의 구조 살펴 보기
+		console.log(event.keyCode);
+
+		//만일 엔터키를 누르면 input 요소에 입력한 value를
+		if(event.keyCode==13){
+			//1. 입력한 value 를 읽어와서
+			var result=document.querySelector("#inputMsg").value;
+
+			//2. p 요소의 innerText 로 출력
+			document.querySelector("#myConsole").innerText=result;
+		}
+		//읽어와서 p 요소의 innerText로 출력해 보세요.
+		// div 는 문단 p는 페러그래피(마진을 가지고 있다.)
+	});
+</script>)
+</body>
+</html>

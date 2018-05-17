@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Clearfix.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.content1{
+			height: 200px;
+			background-color: #f0f;
+		}
+		.content2{
+			height: 400px;
+			background-color: #0ff;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-sm-3">
+			<div class="content2"></div>
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			<div class="content1"></div>
+		</div>
+		<!-- xs 영역에서만 필요한 요소 -->
+		<div class="clearfix visible-xs-block"></div>
+		<div class="col-xs-6 col-sm-3">
+			<div class="content1"></div>
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			<div class="content1"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

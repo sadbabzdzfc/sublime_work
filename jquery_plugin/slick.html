@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slick.html</title>
+	<!-- 플러그인에서 제공하는 css 로딩-->
+	<link rel="stylesheet" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/slick-theme.css"/>
+	<style>
+		.my-slick > div{
+			height: 300px;
+			border: 1px solid red;
+			background-color: #999;
+		}
+		.my-slick img{
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+<h1>slick 플러그인 테스트</h1>
+<div class="my-slick">
+	<div><img src="images/image1.png"/></div>
+	<div><img src="images/image2.png"/></div>
+	<div><img src="images/image3.png"/></div>
+	<div><img src="images/image4.png"/></div>
+	<div><img src="images/image5.png"/></div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<!-- 플러그인 javascript 로딩 -->
+<script src="js/slick.js"></script>
+<script>
+	$(".my-slick").slick({
+		dots:true,
+		slidesToShow:3
+	});
+</script>	
+</body>
+</html>

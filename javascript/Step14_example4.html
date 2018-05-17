@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_example4.html</title>
+</head>
+<body>
+<button id="printBtn">숫자 출력</button>
+<button id="printName">이름 출력</button>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+	var members=[{num:1, name:"김구라"},{num:2, name:"해골"}];
+	members.push({num:3, name:"원숭이"});
+	members.push({num:4, name:"주뎅이"});
+	members.push({num:5, name:"덩어리"});
+
+	/*
+		숫자 추력 버튼을 누르면 div 의 innerText 에 숫자 출력
+		이름 출력 버튼을 누르면 div 의 innerText 에 문자 출력
+
+	*/
+
+	document.querySelector("#printBtn")
+		.addEventListener("click",function(){
+			for(i=0;i<members.length;i++) {
+				document.querySelectorAll("div")[i].innerText=members[i].num;
+			};
+		});
+	document.querySelector("#printName")
+	.addEventListener("click",function(){
+		for(i=0;i<members.length;i++) {
+			document.querySelectorAll("div")[i].innerText=members[i].name;
+		};
+	});
+	document.querySelector("#printBtn")
+		.addEventListener("click",function(){
+			members.forEach(function(item, i){
+				document.querySelectorAll("div")[i].innerText=item.num;
+			});
+		});
+	document.querySelector("#printName")
+		.addEventListener("click",function(){
+			members.forEach(function(item, i){
+				document.querySelectorAll("div")[i].innerText=item.name;
+			});
+		});
+		
+</script>
+</body>
+</html>

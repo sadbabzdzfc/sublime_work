@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step18_JSON.html</title>
+</head>
+<body>
+<script>
+	/*
+		[ JSON ] 
+
+		Java Script Object Notation (자바스크립트 객체 표기법 )
+
+		Data type
+
+		1. string
+		
+		{"name":"김구라"}
+
+		2. number
+
+		{"num":1, "weight":70.5}
+
+		3. boolean
+
+		{"isMan":true, "isWait":false}
+
+		4. object
+		
+		{}
+
+		5. array
+		
+		[]
+
+		6. null
+
+		{"phone":null}
+	*/
+	var mem1={num:1, name:"김구라", addr:"노량진"};
+
+	var mem2='{"num":2, "name":"해골", "addr":"행신동"}';
+
+	// json 형식의 문자열을 javascript object 로 변환
+	var obj=JSON.parse(mem2);
+
+	// obj 는 object 이다.
+	var a=obj.num;
+	var b=obj.name;
+	var c=obj.addr;
+
+
+</script>	
+</body>
+</html>

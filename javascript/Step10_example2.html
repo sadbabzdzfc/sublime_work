@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_example2.html</title>
+</head>
+<body>
+<script>
+
+	var friend={
+		name:"주뎅이",
+		hobby:["당구","치맥","영화"],
+		sing:function(){
+			console.log("노래를 불러요!");
+		}
+	};
+
+	var a=friend; // object
+	var b=friend.name; // string
+	var c=friend.hobby; // array
+	var d=friend.hobby[0]; // string 당구
+	var e=friend.hobby[1]; // stirng 치맥
+	var f=friend.hobby[2]; // stirng 영화
+	var g=friend.sing; // function
+	var h=friend.sing(); // undefined
+
+</script>
+</body>
+</html>

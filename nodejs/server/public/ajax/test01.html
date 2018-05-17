@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax/test01.html</title>
+</head>
+<body>
+<input type="text" id="inputMsg"/>
+<button id="sendBtn">전송</button>
+<button id="sendBtn2">전송2</button>
+<script src="/js/jquery-3.3.1.js"></script>
+<script>
+	//전송 버튼을 눌렀을 때 실행할 함수 등록
+	$("#sendBtn").click(function(){
+		//입력한 문자열을 읽어온다.
+		var msg=$("#inputMsg").val();
+		// ajax 기능을 이용해서 서버에 전송
+		$.ajax({
+			url:"/ajax/test01",
+			method:"post",
+			data:{msg:msg},
+			success:function(data){
+				alert(data);
+			}
+		});
+	})
+
+	//전송 버튼을 눌렀을 때 실행할 함수 등록
+	$("#sendBtn2").click(function(){
+		//입력한 문자열을 읽어온다.
+		var msg=$("#inputMsg").val();
+		// ajax 기능을 이용해서 서버에 전송
+		$.ajax({
+			url:"/ajax/test01",
+			method:"get",
+			data:{msg:msg},
+			success:function(data){
+				alert(data);
+			}
+			
+		});
+	})
+</script>
+</body>
+</html>

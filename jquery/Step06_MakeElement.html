@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_MakeElement.html</title>
+</head>
+<body>
+<div class="container">
+	<h1>Element 만들기 테스트</h1>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("<div>")
+	.text("김구라")
+	.addClass("active")
+	.attr("id","one")
+	.appendTo(".container");
+
+	$("<img>")
+	.attr("src", "images/kim1.png")
+	.attr("title", "김구라 이미지")
+	.appendTo(".container")
+	// .prependTo(".container") 맨 처음값으로 추가
+</script>
+</body>
+</html>

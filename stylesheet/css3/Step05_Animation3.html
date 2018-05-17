@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Animation3.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			border:1px solid red;
+			cursor: pointer;
+		}
+		.my-ani{
+			/* 적용할 애니메이션 keyframes 의 이름 */
+			animation: myAni 3s ease-out 1;
+		}
+		/* 애니메이션 keyframes 정의하기 */
+		@keyframes myAni{
+			0%{
+				background-color: #0f0;
+				transform: rotate(0deg) scale(1.0);
+			}
+			50%{
+				background-color: #f0f;
+				transform: rotate(180deg) scale(0.5);
+			}
+			100%{
+				background-color: #ff0;
+				transform: rotate(360deg) scale(1.5);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>animation 테스트</h1>
+	<div class="box">box</div>
+	<div class="box">box</div>
+	<div class="box">box</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$(".box").click(function(){
+		/* 클릭한 바로 그 요소에 클래스 추가하기 */
+		$(this)
+		.addClass("my-ani")
+		.one("animationend", function(){
+			/* 애니메이션이 끝났을때 클래스 제거하기 */
+			$(this).removeClass("my-ani");
+		})
+	});
+</script>
+</body>
+</html>

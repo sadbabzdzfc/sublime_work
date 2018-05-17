@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_EventHandling.html</title>
+	<style>
+		#friendList li:hover{
+			background-color: yellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<button id="myBtn">눌러보셈</button>
+<h1>친구 목록</h1>
+<ul id="friendList">
+	<li>김구라</li>
+	<li>해골</li>
+	<li>원숭이</li>
+	<li>주뎅이</li>
+	<li>덩어리</li>
+</ul>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	// .on("이벤트명", 핸들링 함수)
+	$("#myBtn").on("click",function(){
+		alert("버튼을 눌렀네?");
+	});
+
+	// li 요소를 click 했을때 실행할 함수 등록
+	$("#friendList li").on("click",function(){
+		$(this).text("clicked!").css("color","blue");
+	})
+</script>
+</body>
+</html>

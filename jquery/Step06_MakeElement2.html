@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_MakeElement2.html</title>
+</head>
+<body>
+<div class="container">
+	<button id="printBtn">출력하기</button>
+	<ul id="friendList">
+		
+	</ul>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	var names=["김구라","해골","원숭이"]
+	//출력하기 버튼을 눌렀을 때 names 배열에 있는 내용을 li
+	//요소의 text 로 출력하고 li 를 ul 에 추가해 보세요.
+	$("#printBtn").click(function(){
+		// for(var i=0;i<names.length;i++){
+		// 	$("<li/>").text(names[i]).appendTo("#friendList")
+		// };
+
+		// names.forEach(function(item){
+		// 	$("<li/>").text(item).appendTo("#friendList")
+		// })
+
+		$(names).each(function(){
+			// this 는 배열의 item 을 가르킨다.
+			$("<li/>").text(this).appendTo("#friendList")
+		});
+	});
+</script>
+</body>
+</html>

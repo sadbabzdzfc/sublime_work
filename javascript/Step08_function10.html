@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_function10.html</title>
+</head>
+<body>
+<h3>function 테스트</h3>
+<div id="myConsole"></div>
+<script>
+	
+	(function(){
+		var myName="김구라";
+	})();
+
+	//카운트를 셀 변수를 만들고 0 대입
+	var count=0;
+
+	//1초 마다 한번씩 호출되는 함수 전달
+	setInterval(function(){
+		//함수 외부 영역에 정의된 count 변수를 참조해서 1씩 증가 시키기
+		count=count+1;
+		//count 값을 div 의 innerText 로 출력하기
+		document.querySelector("#myConsole").innerText=count;
+	}, 1000);
+</script>
+</body>
+</html>

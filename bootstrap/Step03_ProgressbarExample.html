@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_ProgressbarExample.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="progress">
+				<div class="progress-bar progress-bar-success
+				" style="width:10%" id="helo">0%</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<button id="startBtn" class="btn btn-primary btn-block">시작</button>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script>
+	$("#startBtn").click(function(){
+		//프로그래서 값을 저장할 변수 선언하고 0 대입
+		var percent=0;
+
+		var intervalId=setInterval(function(){
+			percent++;
+			$("#helo")
+			.css("width",percent+"%")
+			.text(percent+"%");
+
+			//100% 진행이 되었으면 인터발 취소
+			if(percent==100){
+				clearInterval(intervalId)
+			}
+
+		},100);	
+	});
+</script>
+</body>
+</html>

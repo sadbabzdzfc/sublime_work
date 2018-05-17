@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step15_example.html</title>
+</head>
+<body>
+<input type="text" id="inputMsg"/>
+<button id="addBtn">추가</button>
+<ul id="msgList">
+	<li>하나</li>
+	<li>두울</li>
+	<li>세엣</li>
+</ul>
+<script>
+
+	//input 요소에 포커스 주기
+	document.querySelector("#inputMsg").focus();
+
+	var send=function(){
+			//1. input요소에 입력한 value 값 읽어오기
+			var result=document.querySelector("input").value;
+			//2. li 요소를 만들어서
+			var li1=document.createElement("li");
+			//3. 읽어온 value 값을 li 의 innerText 로 추가하고
+			li1.innerText=result;
+			//4. li 를 ul 요소에 추가 하기
+			// var msgList=document.querySelector("#msgList")
+			// msgList.append(li1)
+			document.querySelector("#msgList").append(li1);
+			//5. 입력한 내용 삭제
+			document.querySelector("#inputMsg").value="";
+	};
+
+
+
+	document.querySelector("#addBtn")
+		.addEventListener("click",function(){
+			send();
+		});
+
+		// input 요소의 keyup 이벤트 처리
+		document.querySelector("#inputMsg")
+			.addEventListener("keyup",function(event){
+				console.log(event.keyCode);
+				if(event.keyCode==13){
+					send();
+				}
+			});
+</script>
+</body>
+</html>

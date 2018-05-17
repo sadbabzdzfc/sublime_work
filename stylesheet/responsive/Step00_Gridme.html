@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 모바일 웹 브라우저에서 반응형 페이지를 구현하기 위한 설정 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Step01_viewport.html</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.container{
+			width: 65%;
+			margin: 0 auto;
+		}
+		.startLink{
+			float:right;
+			font-size: 12px;
+			padding-right: 10px;
+			cursor: pointer;
+		}
+		#startInNaver{		
+			border-right: 0.05px solid gray;
+			padding-right: 20px;
+		}
+		#startInNaver:hover{
+			text-decoration: underline;
+		}
+		#startInJunior{
+			margin-left: 10px;
+		}
+		#startInJunior:hover{
+			color:red;
+		}
+		#startInHappyBean{
+
+		}
+		#startInHappyBean:hover{
+			color:green;
+		}
+		#startMainButton{
+			position: absolute;
+			top:40px;
+			font-family: "NanumGothic";
+			color:#00bb00;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+		img{
+			width: 25px;
+			height: 25px;
+			cursor: pointer;
+		}
+		#selectData{
+			position: absolute;
+			top:65px;
+			left:450px;
+			width: 30%;
+			height: 5%;
+			border: 1.5px solid #00bb00;
+		}
+		#selectDateBtn{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="startLink" id="startInHappyBean">해피빈</div>
+<div class="startLink" id="startInJunior">쥬니어네이버</div>
+<div class="startLink" id="startInNaver">네이버를 시작페이지로></div>
+<h1 id="startMainButton"><img src="images/mi1.png"/> Naver</h1>
+<input type="text" id="selectData"><img src="images/btn_icon_search02.gif" id="selectDateBtn"></input>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_example.html</title>
+</head>
+<body>
+<h3>array 테스트</h3>
+<input type="text" id="inputMsg"/>
+<button onclick="msgspush();">전송</button>
+<script>
+	var msgs=[];
+	// 전송 버튼을 눌렀을떄 호출되는 함수
+	var msgspush=function(){
+		//1. 입력한 문자열을 읽어온다.
+		var msg = document.querySelector("#inputMsg").value;
+		//2. 배열에 저장한다.
+		msgs.push(msg);
+		//3. 알림 띄우기
+		alert("배열에 저장했습니다.");
+		document.querySelector("#inputMsg").value ="";
+
+	};
+</script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sad</title>
+</head>
+<body>
+	<input type="text" id="roma"/>
+	<button onclick="sys()">전송</button>
+<script>
+	var isSttack=[];
+	var sys=function(){
+		var a =document.querySelector("#roma").value;
+		isSttack.push(a);
+		alert(isSttack);
+		document.querySelector("#roma").value = "";
+	}
+</script>
+</body>
+</html>

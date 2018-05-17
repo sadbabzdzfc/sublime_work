@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step12_operator2.html</title>
+</head>
+<body>
+<h3>논리 연산자 테스트</h3>
+<script>
+	/*
+		2. 논리(boolean) 연산자
+
+		- 논리값 (true, false) 를 계산해 주는 연산자.
+
+		&& : and 연산
+		|| : or  연산
+		!  : not 연산
+
+	*/
+
+	// and 연산은 연산에 참여하는 boolean 값이 모두 true 일때
+	// 결과는 true 이다.
+	var result1=false&&false; // f
+	var result2=false&&true; // f
+	var result3=true&&false; // f
+	var result4=true&&true; // t
+
+	// and 연산은 연산에 참여하는 boolean 값이 어느 하나만 true 이면 결과는 true 이다.
+	var result5=false||false; //f
+	var result6=false||true; //t
+	var result7=true||false; //t
+	var result8=true||true; //t
+
+	// not 연산은 boolean 값을 반전 시킨다.
+	var result9=!false; // true
+	var result10=!true; // false
+
+	var isRun=true;
+
+	if(!isRun){
+		console.log("달리지 않을거야!");
+	}else{
+		console.log("달리지 않을거야!");
+	}
+
+</script>	
+</body>
+</html>

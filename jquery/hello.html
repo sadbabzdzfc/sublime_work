@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello.html</title>
+	<!-- jquery 로딩하기 -->
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<div>div1</div>
+<div class="my-class">div2</div>
+<div class="my-class">div3</div>
+<div id="one">div4</div>
+<div>div5</div>
+<script>
+	$("div").text("김구라");
+	$(".my-class").css("color","red");
+	$("#one").css("background-color","#999");
+</script>
+</body>
+</html>

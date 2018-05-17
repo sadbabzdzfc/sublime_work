@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_CustomEffect.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			background-color: yellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="box">div1</div>
+<div class="box">div2</div>
+<div class="box">div3</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$(".box").click(function(){
+		/*
+			.animate(object, number, function)
+
+			object = > css property
+			number => duration
+			function => complete function
+		*/
+		$(this)
+		.animate({
+			width:"200px",
+			height:"200px",
+			marginLeft:"100px",
+			"font-size":"50px",
+			borderWidth:"10px"
+		},1000, function(){
+			$(this).text("The End!");
+		});
+	});
+</script>
+</body>
+</html>

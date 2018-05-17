@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_Example.html</title>
+	<style>
+		.wrapper{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>transform 테스트</h1>
+<button id="leftBtn">좌</button>
+<button id="rightBtn">우</button>
+<button id="rotateBtn">회전</button>
+<div class="wrapper">
+	<img src="images/kim1.png"/>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	//x좌표를 저장할 변수
+	var x=0;
+	//회전 각도를 저장할 변수
+	var angle=0;
+
+	var move=function(){
+		$(".wrapper img").css("transform","translateX("+x+"px)rotate("+angle+"deg)")
+	}
+
+	$("#leftBtn").click(function(){
+		x-=45;
+		move();
+	});
+	$("#rightBtn").click(function(){
+		x+=45;
+		move();
+	});
+	$("#rotateBtn").click(function(){
+		angle+=45;
+		move();
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// // 움직이는 함수
+	// var move=function(){
+	// 	$(".wrapper img").css("transform", "translateX("+x+"px)rotate("+angle+"deg)");
+	// }
+
+
+	// $("#leftBtn").click(function(){
+	// 	// x 값 감소 시키기
+	// 	x-=100;
+	// 	// 움직이기
+	// 	move();
+	// });
+	// $("#rightBtn").click(function(){
+	// 	x+=100;
+	// 	move();
+	// });
+	// $("#rotateBtn").click(function(){
+	// 	angle+=45;
+	// 	move();
+	// });
+</script>
+</body>
+</html>

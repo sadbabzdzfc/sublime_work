@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step13_event6.html</title>
+	<style>
+		a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+<a href="http://naver.com">naver</a>
+<button>버튼</button>
+<script>
+	/*
+		a 요소와 button 요소에 각각 "focus" 이벤트와 "blur" 이벤트가 일어 났을때 실행할
+		함수를 등록하고 언제 foucs 이벤트와 blur 이벤트가
+		일어나는 지 조사 해 보세요.
+
+		hint : Tab 키를 눌러 보세요.
+	*/
+
+	//a.foucs event
+	document.querySelector("a")
+		.addEventListener("focus",function(event){
+			 console.log(event.target);
+			 console.log(event.type);
+			 this.style.textDecoration="underline";
+		});
+	//a.blur event
+	document.querySelector("a")
+		.addEventListener("blur",function(event){
+			 console.log(event.target);
+			 console.log(event.type);
+			 this.style.textDecoration="none";
+		});
+	//b.foucs event
+	document.querySelector("button")
+		.addEventListener("focus",function(event){
+			 console.log(event.target);
+			 console.log(event.type);
+		});
+	//b.blur event
+	document.querySelector("button")
+		.addEventListener("blur",function(event){
+			 console.log(event.target);
+			 console.log(event.type);
+		});
+</script>
+</body>
+</html>

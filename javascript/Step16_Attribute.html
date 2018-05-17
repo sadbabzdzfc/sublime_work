@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step16_attribute.html</title>
+</head>
+<body>
+<h3>속성 조작 테스트</h3>
+<button id="runBtn">달리기</button><br/>
+<button id="stopBtn">멈추기</button>
+<img id="one" src="images/run1.png"/>
+<script>
+	var data=["images/run1.png", "images/run2.png", "images/run3.png"];
+	var index=0;
+	var mLeft=0;
+
+			var i=0;
+	document.querySelector("#runBtn")
+		.addEventListener("click",function(){
+
+		});
+		setInterval(function(){
+			if(i==2){
+				i=0;
+			}else{
+				i++;
+			}
+			document.querySelector("#one")
+				.setAttribute("src","images/run1.png")
+				mLeft+=10;
+			document.querySelector("#one")
+				.style.marginLeft=mLeft+"px";
+		},50)
+
+
+
+
+
+
+
+
+
+
+
+	// //버튼을 눌렀을때 움직이게 하기
+	// document.querySelector("#runBtn")
+	// .addEventListener("click", function(){
+	// 	index++;
+	// 	if(index==2){
+	// 		index=0;
+	// 	}
+	// 	document.querySelector("#one")
+	// 	.setAttribute("src", data[index]);
+
+	// 	mLeft += 10;
+	// 	document.querySelector("#one")
+	// 	.style.marginLeft=mLeft+"px";
+	// });
+
+	//setInterval() 함수를 이용해서 자동으로 움직이게
+	// var intervalId=setInterval(function(){
+	// 	index++;
+	// 	if(index==2){
+	// 		index=0;
+	// 	}
+	// 	document.querySelector("#one")
+	// 	.setAttribute("src", data[index]);
+
+	// 	mLeft += 10;
+	// 	document.querySelector("#one")
+	// 	.style.marginLeft=mLeft+"px";
+	// },80)
+
+	// document.querySelector("#stopBtn")	
+	// 	.addEventListener("click",function(){
+	// 		clearInterval(intervalId)
+	// 	});
+</script>	
+</body>
+</html>

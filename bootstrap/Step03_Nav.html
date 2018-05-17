@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_Nav.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h3>기본 스타일 tab</h3>
+	<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#one">one</a></li>
+		<li><a data-toggle="tab" href="#two">two</a></li>
+		<li><a data-toggle="tab" href="#three">three</a></li>
+	</ul>
+	<!-- tab 의 내용 만들기 -->
+	<div class="tab-content">
+		<div class="tab-pane active fade in" id="one">
+			<p class="bg-success">One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur enim vel, non eaque eos obcaecati odio tempore quo fugiat perferendis! Assumenda saepe doloremque ab amet facere hic. Sint, non, doloribus!</p>
+		</div>
+		<div class="tab-pane fade" id="two">
+			<p class="bg-primary">Two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero necessitatibus provident ad alias repellat odit omnis tempora consequuntur quaerat fugit minus, esse optio rerum, fugiat, repudiandae, quasi. Eaque, laboriosam, neque.</p>
+		</div>
+		<div class="tab-pane fade" id="three">
+			<p class="bg-warning">Three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, error non labore autem doloribus tempora, animi veritatis provident distinctio neque recusandae voluptatem beatae ad nobis, sapiente quaerat maxime aliquid perferendis.</p>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	

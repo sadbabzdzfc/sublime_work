@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selector2.html</title>
+	<style>
+		/*div{
+			padding: 10px;
+			background-color: #000;
+			color: #fff;
+		}*/
+
+		/*.animals{
+			padding: 10px;
+			background-color: #000;
+			color: #fff
+		}*/
+
+		/* div 요소 이면서 클래스 속성값이 animals 인 요소 선택*/
+		div.animals{
+			padding: 10px;
+			background-color: #000;
+			color: #fff
+		}
+
+		/*
+			선택자를 붙여서 쓰면 and 조건으로 문서를 선택한다.
+
+			div.animals => 요소명이 div 이면서 클래스명이 animal
+			p.friends => 요소명이 p 이면서 클래스명이 friends
+			div.a.b => 요소명이 div 이고 클래스명이 a 와 b
+			.a.b => 클래스명이 a 와 b
+		*/
+
+	</style>
+</head>
+<body>
+<div class="animals">
+<h2>Dog</h2>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iure qui quo, animi, inventore adipisci in similique laboriosam repudiandae sapiente fugit! Cumque vel ad illo iure doloremque aspernatur reiciendis omnis.</div>
+<div class="animals">
+<h2>Cat</h2>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, tempore accusamus nam accusantium quibusdam optio, neque unde vero molestiae similique quos, omnis eligendi aperiam cumque nostrum facere placeat. Provident, libero.</div>
+<p class="animals">
+h
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, nisi aliquid cumque tempora non fugit quasi consequuntur modi delectus nesciunt alias corporis enim molestiae sequi itaque perspiciatis. Saepe, illum, id.</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quidem voluptate eligendi harum similique magni, non nihil eius at! Nisi ipsam sed consectetur neque, suscipit. Aliquam voluptas sit, vel tempore.
+</p>
+</body>
+</html>

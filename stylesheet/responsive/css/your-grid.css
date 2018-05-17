@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_MyGrid.html</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.row{
+			border: 1px solid red;
+		}
+		/* .row 안에 float 된 요소가 있으면 자동 clear 된다. */
+		.row:after{
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{
+			float: left;
+			border: 1px dotted green;
+			padding: 0 15px;
+		}
+
+		.col-xs-1 {width: 8.33%;}
+		.col-xs-2 {width: 16.66%;}
+		.col-xs-3 {width: 25%;}
+		.col-xs-4 {width: 33.33%;}
+		.col-xs-5 {width: 41.66%;}
+		.col-xs-6 {width: 50%;}
+		.col-xs-7 {width: 58.33%;}
+		.col-xs-8 {width: 66.66%;}
+		.col-xs-9 {width: 75%;}
+		.col-xs-10 {width: 83.33%;}
+		.col-xs-11 {width: 91.66%;}
+		.col-xs-12 {width: 100%;}
+
+		/* 디바이스의 width 가 최소 768px 이상일 때 적용할 css */
+		@media(min-width: 768px){
+		.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{
+			float: left;
+			border: 1px dotted green;
+			padding: 0 15px;
+		}
+
+		.col-sm-1 {width: 8.33%;}
+		.col-sm-2 {width: 16.66%;}
+		.col-sm-3 {width: 25%;}
+		.col-sm-4 {width: 33.33%;}
+		.col-sm-5 {width: 41.66%;}
+		.col-sm-6 {width: 50%;}
+		.col-sm-7 {width: 58.33%;}
+		.col-sm-8 {width: 66.66%;}
+		.col-sm-9 {width: 75%;}
+		.col-sm-10 {width: 83.33%;}
+		.col-sm-11 {width: 91.66%;}
+		.col-sm-12 {width: 100%;}
+		}
+	</style>
+</head>
+<body>
+<h1>Grid 테스트</h1>
+<div class="row">
+	<div class="col-6">1</div>
+	<div class="col-6">2</div>
+</div>
+<div class="row">
+	<div class="col-4">1</div>
+	<div class="col-4">2</div>
+	<div class="col-4">3</div>
+</div>	
+</body>
+</html>

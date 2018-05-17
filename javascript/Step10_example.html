@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_example.html</title>
+</head>
+<body>
+<button onclick="test()">눌러보셈</button>
+<script>
+	var members=[
+		{num:1, name:"김구라", addr:"노량진"},
+		{num:2, name:"해골", addr:"행신동"},
+		{num:3, name:"원숭이", addr:"상도동"}
+	];
+
+	// var a=members; //array type
+	// var a=members[0]; //object type
+	// var a=members[0].num; //number type
+	// var a=members[0].name; //string type "김구라"
+	// var a=members[0].addr; //string type "노량진"
+
+
+	var test = function () {
+	//1. 원숭이의 주소를 동물원으로 수정해 보세요.
+	a[2].addr="동물원";
+	members[2].addr="동물원";
+	//2. 해골의 이름을 해골님으로 수정해 보세요.
+	a[1].name="해골님";
+	members[1].name="해골님"
+	//3. 자신의 정보를 members 배열에 추가해 보세요.
+	// a[3] = {num:5, name:"내", addr:"난동"};
+	a.push({num:4, name:"송", addr:"난곡동"});
+	//4. members 배열에서 김구라의 정보를 제거해 보세요.
+	a.splice(0,1);
+	};
+
+</script>
+</body>
+</html>

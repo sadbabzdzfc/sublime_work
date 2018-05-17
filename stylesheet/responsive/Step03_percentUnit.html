@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_percentUnit.html</title>
+	<style>
+	
+	.row{
+		background-color: #0f0;
+	}
+	.col{
+		float: left;
+		/* % 단위 활용하기 */
+		width: 50%;
+		border: 1px solid red;
+	}
+	.col:nth-child(1){
+		background-color: yellow;
+	}
+	.col:nth-child(2){
+		background-color: pink;
+	}
+	</style>
+</head>
+<body>
+<div class="row">
+	<div class="col">column1</div>
+	<div class="col">column2</div>
+</div>
+</body>
+</html>

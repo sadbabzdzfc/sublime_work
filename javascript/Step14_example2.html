@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_example2.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div>div5</div>
+<div>div6</div>
+<div>div7</div>
+<div>div8</div>
+<div>div9</div>
+<div>div10</div>
+<button id="changeBtn">눌러보셈</button>
+<script>
+
+	// document.querySelector("#changeBtn")
+	// 	.addEventListener("click",function(){
+	// 		var result=document.querySelectorAll("div");
+	// 			result.forEach(function(item, i){
+	// 				if(i%2==0){
+	// 					item.style.backgroundColor="yellow";
+	// 					item.innerText="clicked";
+	// 				};				
+	// 			});
+	// 	});
+
+
+
+	// 모든 div의 참조값을 배열에 담아오기
+	document.querySelector("#changeBtn").addEventListener("click",function(){
+		var divs=document.querySelectorAll("div");
+		for(var i=0;i<divs.length;i+=2){
+			//if(i%2==0){
+				divs[i].style.backgroundColor="yellow";
+			//};
+		};
+		divs.forEach(function(item, i){
+			if(i%2==0){
+				item.innerText="짝수행 입니다.";
+			}
+		});
+	});
+</script>
+</body>
+</html>

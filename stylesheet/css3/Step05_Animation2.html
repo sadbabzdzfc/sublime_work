@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Animation.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			border:1px solid red;
+		}
+		.my-ani{
+			/* 적용할 애니메이션 keyframes 의 이름 */
+			animation: myAni 3s ease-out infinite alternate;
+		}
+		/* 애니메이션 keyframes 정의하기 */
+		@keyframes myAni{
+			0%{
+				background-color: #0f0;
+				transform: rotate(0deg) scale(1.0);
+			}
+			50%{
+				background-color: #f0f;
+				transform: rotate(180deg) scale(0.5);
+			}
+			100%{
+				background-color: #ff0;
+				transform: rotate(360deg) scale(1.5);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>animation 테스트</h1>
+	<div class="box">box</div>
+	<button id="startBtn">start</button>
+	<button id="stopBtn">stop</button>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$("#startBtn").click(function(){
+		$(".box").addClass("my-ani")
+	});
+
+	$("#stopBtn").click(function(){
+		$(".box").removeClass("my-ani")
+	});
+</script>
+</body>
+</html>

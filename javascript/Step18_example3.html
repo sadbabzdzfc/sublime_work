@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step18_example3.html</title>
+</head>
+<body>
+<input type="text" id="inputMsg" placeholder="저장할 메세지..." />
+<button id="saveBtn">저장</button>
+<button id="showBtn">저장된 메세지 보기</button>
+<button id="deleteBtn">저장된 메세지 삭제</button>
+<p id="result"></p>
+<script>
+
+	document.querySelector("#saveBtn")
+	.addEventListener("click", function(){
+		//입력한 문자열을 읽어온다.
+		var msg=document.querySelector("#inputMsg").value;
+		//localStorage 에 저장하기 
+		localStorage.msg=msg
+		alert("저장했습니다.");
+	});
+
+	//보기 버튼을 눌렀을때 실행할 함수 등록 
+	document.querySelector("#showBtn")
+	.addEventListener("click", function(){
+		// localStorage 에 msg 라는 키값으로 저장된 문자열 불러와서 innerText 에 출력 
+		document.querySelector("#result").innerText
+				=localStorage.msg;
+	});
+	document.querySelector("#deleteBtn")
+	.addEventListener("click",function(){
+		// localStorge 의 msg 라는 방 삭제
+		delete localStorage.msg;
+		alert("삭제 하였습니다.");
+	});
+</script>
+</body>
+</html>

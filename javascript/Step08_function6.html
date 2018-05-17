@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_function6.html</title>
+</head>
+<body>
+<h3>function 테스트</h3>
+<script>
+	/*
+		함수를 저장할 변수의 이름 : getSum
+		인자를 전달받는 갯수 : 2개
+		인자로 숫자를 2개 전달 받으면 두 수의 합을 구해서
+		리턴해주는 함수를 만들고 테스트 해 보세요.
+	*/
+	var getSum = function(num1, num2){
+	//두수의 합을 구해서
+	var result=num1+num2;
+	//리턴 해 주기
+	return result;
+	};
+
+	var result1=getSum(1, 2); //3
+	var result2=getSum(10, 20);//30
+	var result3=getSum(100, 200);//300	
+</script>
+</body>
+</html>

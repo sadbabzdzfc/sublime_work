@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_NavbarPosition.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		body{
+			/* 상단 navbar 의 height 만큼 padding 부여 */
+			padding-top: 50px;
+		}
+
+		@media(max-width: 767px){
+			body{
+				padding-bottom: 50px;
+			}			
+		}
+	</style>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<a href="" class="navbar-brand">Brand</a>
+</div>
+<div class="container">
+	<h3>여기는 contents 입니다.</h3>
+	<p class="bg-info" style="height: 1000px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dignissimos mollitia magni aspernatur, in sequi corrupti. Doloremque, consequuntur architecto autem debitis error. Hic aut et perspiciatis, suscipit eaque soluta id!</p>
+</div>
+<div class="bg-success" style="height: 200px">
+	하단 footer 영역
+</div>
+
+<div class="visible-xs-block navbar navbar-inverse navbar-fixed-bottom">
+	<a href="" class="navbar-brand">Brand</a>
+</div>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+</body>
+</html>

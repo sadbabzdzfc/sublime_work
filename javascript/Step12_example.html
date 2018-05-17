@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step12_example.html</title>
+</head>
+<body>
+<h3>산술 연산자 테스트</h3>
+<input type="text" id="one"/>
+<button onclick="add()">+</button>
+<button onclick="minus()">-</button>
+<button onclick="multi()">*</button>
+<input type="text" id="two"/>
+<strong>=</strong>
+<input type="text" id="result"/>
+<script>
+	var add = function(){
+		// one과 two의 값을 가져오고 저장한다.
+		var a=parseInt(document.querySelector("#one").value);
+		var b=parseInt(document.querySelector("#two").value);
+		var result=a+b;
+		// 저장한값을 result에 넣어준다.
+		document.querySelector("#result").value=result;
+	};
+	var minus = function(){
+		// one과 two의 값을 가져오고 저장한다.
+		var a=parseInt(document.querySelector("#one").value);
+		var b=parseInt(document.querySelector("#two").value);
+		var result=a-b;
+		// 저장한값을 result에 넣어준다.
+		document.querySelector("#result").value=result;
+	};
+	var multi = function(){
+		// one과 two의 값을 가져오고 저장한다.
+		var a=parseInt(document.querySelector("#one").value);
+		var b=parseInt(document.querySelector("#two").value);
+		var result=a*b;
+		// 저장한값을 result에 넣어준다.
+		document.querySelector("#result").value=result;
+	};
+</script>
+</body>
+</html>

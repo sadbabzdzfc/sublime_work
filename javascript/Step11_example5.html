@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_example5.html</title>
+</head>
+<body>
+<h3>다중 if 문 테스트</h3>
+<input type="text" id="inputNum"/>
+<button onclick="test()">판별</button>
+<div id="result"></div>
+<script>
+	var test=function(){
+		//1. 입력한 문자열을 읽어온다.
+		var inputNum=document.querySelector("#inputNum").value;
+		// string 을 number type 으로 바꾼다.
+		var num = parseInt(inputNum);
+		//2. 양수, 음수, 0 를 판별에서 출력하기
+		var result2=document.querySelector("#result")
+
+		if(num==0){
+			result2.innerText="0";
+		}else if (num>0){
+			result2.innerText="양수";
+		}else{
+			result2.innerText="음수";
+		}
+	}
+</script>
+</body>
+</html>

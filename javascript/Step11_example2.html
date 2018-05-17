@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_example2.html</title>
+</head>
+<body>
+<h3>if 문 테스트</h3>
+<button onclick="add()">눌러보셈</button>
+<div id="one">0</div>
+<script>
+	//카운트를 셀 변수
+	var count=0;
+	var add = function(){
+		//만일 count 가 10이면 함수 종료(return) 시켜라.
+		if(count==10)return;
+		//1. count를 1 증가 시킨다. 
+		count=count+1;
+		//2. id 가 one 인 div 의 innerText 에 출력한다.
+		document.querySelector("#one").innerText = count;
+		};
+</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>a</title>
+</head>
+<body>
+<button onclick="add()">눌러보셈</button>
+<div id="one">0</div>
+<script>
+	count=0;
+	var add=function(){
+		if(count==10){
+			return;
+		}
+		count=count+1;
+		document.querySelector("#one").innerText=count;
+		}
+</script>
+</body>
+</html>

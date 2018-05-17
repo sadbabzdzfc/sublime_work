@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_mediaQuery3.html</title>
+	<style>
+		#one, #two, #three{
+			display: none;
+		}
+		/* 최대 767px 까지만 존재하는 css */
+		@media(max-width: 767px){
+			#one{
+				display: block;
+			}
+		}
+		/* 최소 768px 최대 991px 까지만 존재하는 css*/
+		@media(min-width: 768px) and (max-width: 991px){
+			#two{
+				display: block;
+			}
+		}
+		@media(min-width: 992px){
+			#three{
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+<h1>media Query 테스트</h1>
+<p id="one">현재 device 의 width 는 <strong>767px</strong> 이하 입니다. </p>
+<p id="two">현재 device 의 width 는 <strong>768px</strong> 이상 <strong>991px</strong> 이하 입니다.</p>
+<p id="three">현재 device 의 width 는 <strong>992px</strong> 이상 입니다.</p>	
+</body>
+</html>

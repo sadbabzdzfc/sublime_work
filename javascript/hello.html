@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>naver.com</title>
+<style>
+	.container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	nav ul{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	nav li{
+		float: left;
+	}
+	nav{
+		background-color: #00ff00;
+		overflow: auto;
+	}
+	nav a{
+		text-decoration: none;
+		color: #999;
+		display: block;
+		padding: 10px 20px;
+	}
+	nav a:hover, nav a:focus{
+		color: #fff;
+		background-color: #cecece
+	}
+	h1{
+		color: #00ff00;
+		font-size: 50px;
+	}
+	.one{
+		position: static;
+		width: 100px;
+		height: 100px;
+		border: 1px solid yellow;
+		top: 150px;
+		left: 50px;
+	}
+	#select{
+		top: -10px;
+		left: 150px;
+		width: 500px;
+		padding-top: 20px;
+		border: #00ff00 1px solid;
+	}
+	.wrapper{
+		position: relative;
+		top: -95px;
+		left: 150px;
+		width: 550px;
+		height: 0px;
+		padding-top: 20px;
+	}
+	.wrapper button{
+		position: absolute;
+		top:20px;
+		right: -16px;
+		padding: 9px;
+		border-style: green;
+	}
+	table, textarea, select{
+		float: right;
+	}
+	img{
+		width: 800px;
+		height: 200px;
+	}
+	textarea{
+		width: 170px;
+		height: 135px;
+		position: absolute;
+		right: 300px;
+		top: 330px;
+	}
+	select{
+		position: absolute;
+		width: 150px;
+		right: 310px;
+		top: 165px;
+		border-style: green;
+	}
+	a>img{
+		width: 190px;
+		margin:0px;
+		padding:0px;
+	}
+</head>
+</style>
+<body>
+<div class="container">
+	<h1>naver</h1>
+	<div class="wrapper">
+		<input type="text" id="select">
+		<button id="yyy">Search</button>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#">Mail</a></li>
+			<li><a href="http://14.63.164.99/">Cafe</a></li>
+			<li><a href="http://news.naver.com/main/opinion/home.nhn">Blog</a></li>
+			<li><a href="http://news.naver.com/main/main.nhn?mode=LSD&mid=shm&sid1=105">Contacts</a></li>
+			<li><a href="http://news.naver.com/main/main.nhn?mode=LSD&mid=shm&sid1=104">World</a></li>
+			<li><a href="">Sport</a></li>
+			<li><a href="">Map</a></li>
+			<li><a href="">Store</a></li>
+			<li><a href="">Car</a></li>
+			<li><a href="">More</a></li>
+		</ul>
+	</nav>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit qui iure temporibus praesentium facilis neque ad vero ex veniam dolorem id fugit, minima voluptatum libero molestiae nihil porro, beatae placeat. </p>
+	<form action="loginAction"></form>
+	<table>
+		<tr>
+			<td><label for="email"></label></td>
+			<td><input type="text" id="email" placeholder=" id"></td>
+		</tr>
+		<tr>
+			<td><label for="pwd"></label></td>
+			<td><input type="password" id="pwd" placeholder=" password"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+<img src="images/backbg2.png" alt="">
+<table float="right">
+	<label for="comment"></label>
+	<br/>
+	<textarea name="comment" id="comment" placeholder="" cols="30" rows="10"></textarea>
+</table>
+	<label for="job"></label>
+	<select name="job" id="job">
+		<option value="">Hot Line</option>
+		<option value="">2호선</option>
+		<option value="">지하철</option>
+		<option value="">첫지각</option>
+		<option value="etc">기타 등등</option>
+	</select>
+	<table border="1" cellspacing="0">
+		<caption>ShowWindows</caption>
+	<colgroup>
+		<col width="200" />
+		<col width="200" />
+		<col width="200" />
+		<col width="200" />
+		<col width="200" />
+		<col width="200" />
+	</colgroup>	
+		<thead>
+		<!-- tr 은 table row를 의미한다 (행) -->
+		<tr>
+			<!-- 칼럼의 갯수 만큼 th 를 만들고 칼럼명을 적는다. -->
+			<th>Soccer</th>
+			<th>Application</th>
+			<th>SmartPhone</th>
+			<th>Job</th>
+			<th>Car</th>
+		</tr>
+	</thead>
+	<tbody>
+		<td><a href=""><img src="images/Spain.png" alt=""></a></td>
+		<td><a href=""><img src="images/USA.png" alt=""></a></td>
+		<td><a href=""><img src="images/Southkorea.png" alt=""></a></td>
+		<td><a href=""><img src="images/Sweden.png" alt=""></a></td>
+		<td><a href=""><img src="images/UK.png" alt=""></a></td>
+	</tbody>
+	</table>
+	<div style="background-color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, ut aspernatur deleniti ipsam nisi repellat rem nam fugit sunt iusto nemo tempora perspiciatis ullam magni, hic dolorem doloribus, aliquid consectetur.</div>
+</div>
+<script>
+</script>
+</body>
+</html>

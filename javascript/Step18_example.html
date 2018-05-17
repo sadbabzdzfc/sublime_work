@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step18_example.html</title>
+</head>
+<body>
+<h3>json 문자열 활용하기</h3>
+<button id="printBtn">출력하기</button>
+<p id="info"></p>
+<script>
+	var mem=`{
+		"num":1,
+		"name":"김구라",
+		"addr":"노량진"
+	}`;
+
+
+	/*mem 에 있는 json 문자열에 있는 정보를 이용해서
+	 출력하기 버튼을 누르면
+
+	 번호:1 이름:김구라 주소:노량진
+
+	 형식으로 위에 있는 p 요소에 innerText 로 출력해 보세요. 
+	*/
+
+
+	// 1. button의 id 활용
+	document.querySelector("#printBtn")
+		.addEventListener("click",function(){
+			// json 문자열을 object 로 변환
+			var obj=JSON.parse(mem);
+			// 형식에 맞는 문자열 만들기
+			var line="번호:"+obj.num+" 이름:"+obj.name+" 주소:"+obj.addr;
+			// innerText 로 출력하기
+			document.querySelector("#info").innerText=line;
+
+		});
+	// 2. JSON을 가져와 obj에 담고
+	// 3. 그것을 p inner에 담는다.
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_each.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div>div5</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	var names=["김구라","해골","원숭이","주뎅이","덩어리"]
+	$("div").each(function(index){
+		/*
+			this 는 선택된 문서객체를 순서대로 참조 할 수 있다.
+			index 는 함수의 첫번째 인자로 전달된다.
+		*/
+		$(this).text(names[index]);
+	});
+</script>
+</body>
+</html>

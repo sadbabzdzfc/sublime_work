@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step13_event3.html</title>
+	<style>
+	/* id 가 myBox 인 요소에 적용할 css 지금 없는 것도 미리 약속을 해놓는다 그러기에 div id 보다 위에 있어도 실행*/ 
+		#myBox{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<h3>마우스 이벤트  처리</h3>
+<div id="myBox">box</div>
+<script>
+	document.querySelector("#myBox")
+		.addEventListener("mouseover", function(){
+			// this 라는 예역어는 mouseover 이벤트가 일어난
+			// 객체의 참조값(키값)을 가르킨다.
+			console.log("mouseover!");
+				this.style.backgroundColor="gray";
+		});
+	document.querySelector("#myBox")
+		.addEventListener("mouseout", function(){
+			// this 라는 예역어는 mouseout 이벤트가 일어난
+			// 객체의 참조값(키값)을 가르킨다.
+			console.log("mouseout!");
+				this.style.backgroundColor="white";
+
+		});
+	document.querySelector("#myBox")
+		.addEventListener("mousedown", function(){
+			// this 라는 예역어는 mouseout 이벤트가 일어난
+			// 객체의 참조값(키값)을 가르킨다. 
+			console.log("mousedown!");
+			this.style.backgroundColor="pink";
+		});
+				// js는 css와 다르게 키 값이 없으면 실행되지 않는다. script를 div 위로 올리면 해석이 되지 않음.
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Glyphicon.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		.my-font{
+			font-size: 100px;
+			color: blue;
+		}
+		.glyphicon-trash{
+			font-size: 100px;
+			color: red;
+		}
+		.glyphicon-refresh{
+			font-size: 100px;
+			color: pink;
+		}
+		.glyphicon-refresh:hover{
+			animation: myAni 3s linear infinite;
+		}
+		@keyframes myAni{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h3>glyphicon 테스트</h3>
+	<span class="glyphicon glyphicon-trash"></span>
+	<span class="my-font">A</span>
+	<span class="glyphicon glyphicon-refresh"></span>
+
+	<h3>버튼과 함께 사용</h3>
+	<button class="btn btn-primary">전송 <i class="glyphicon glyphicon-send"></i></button>
+
+	<button class="btn btn-danger">취소<i class="glyphicon glyphicon-remove"></i></button>
+
+	<h3>anchor 에 glyphicon 사용</h3>
+	<a href="#"><span class="sr-only">검색</span><i class="glyphicon glyphicon-search"></i></a>
+</div>
+</body>
+</html>

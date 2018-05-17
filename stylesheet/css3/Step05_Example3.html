@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Animation3.html</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #0f0;
+			border:1px solid red;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>animation 테스트</h1>
+	<div class="box animated">box</div>
+	<div class="box animated">box</div>
+	<div class="box animated">box</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	$(".box").click(function(){
+		/* 클릭한 바로 그 요소에 클래스 추가하기 */
+		$(this)
+		.addClass("tada")
+		.one("animationend", function(){
+			/* 애니메이션이 끝났을때 클래스 제거하기 */
+			$(this).removeClass("tada");
+		})
+	});
+</script>
+</body>
+</html>

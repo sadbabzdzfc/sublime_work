@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_Example2.html</title>
+	<style>
+		.wrapper{
+			width: 400px;
+			height: 400px;
+			border:1px solid red;
+			position: relative;
+			overflow: hidden;
+		}
+		.wrapper img{
+			width:400px;
+			position: absolute;
+			/*top:0;*/
+		}
+		/* 
+			img:nth-child(n) 가상 클래스 선택자;
+
+			img 요소의 부모 요소 입장에서 n 번째 자식 
+		*/
+		.wrapper img:nth-child(1){
+			left: 0;
+		}
+		.wrapper img:nth-child(2){
+			left: 400px;
+		}
+		.wrapper img:nth-child(3){
+			left: 800px;
+		}
+		.wrapper img:nth-child(4){
+			left: 1200px;
+		}
+		.wrapper img:nth-child(5){
+			left: 1600px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<img src="images/image1.png">
+	<img src="images/image2.png">
+	<img src="images/image3.png">
+	<img src="images/image4.png">
+	<img src="images/image5.png">
+</div>
+<button id="prevBtn">&laquo;</button>
+<button id="nextBtn">&laquo;</button>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	//현재 보여주고 있는 이미지의 인덱스
+	var currentIndex=0;
+
+	$("#prevBtn").click(function(){
+
+		// 만일 지금이 마지막 인덱스라면
+		if(currentIndex==4){
+			return; // 함수 종료
+		}
+		//인덱스 증가 시키기
+		currentIndex++;
+
+		$(".wrapper img").animate({
+			left:"-=400px"
+		});
+	});
+
+	$("#nextBtn").click(function(){
+		//만일 제일 첫번째 인덱스라면
+		if(currentIndex==0){
+			return; //함수 종료
+		}
+		//인덱스 감소 시키기
+		currentIndex--;
+
+		$(".wrapper img").animate({
+			left:"+=400px"
+		});
+	});
+</script>
+</body>
+</html>

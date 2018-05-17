@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_function2.html</title>
+</head>
+<body>
+<h3>function 테스트</h3>
+<script>
+	/*
+		[함수가 종료되는 시점]
+		1. 실행하다가 더이상 실행할게 없을때
+		2. 실행하다가 return 이라는 예약어를 만났을때
+	*/
+
+	var a=function(){
+		console.log("a 함수 호출됨");
+	};
+
+	var b=function(){
+		console.log("b 함수 호출됨");
+		return;
+	};
+
+	a();
+
+	b();
+
+	console.log("javascript 로딩이 종료 됩니다.");
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_example.html</title>
+	<style>
+		/* div 요소에 마우스가 hover 되었을때 적용할 css */
+		div:hover{
+			background-color:yellow;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+<h3>반복문 돌면서 이벤트 리스너 등록하기</h3>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div>div5</div>
+<div>div6</div>
+<div>div7</div>
+<div>div8</div>
+<div>div9</div>
+<div>div10</div>
+<script>
+
+
+
+	var result=document.querySelectorAll("div");
+	result.forEach(function(event){
+		event.addEventListener("click",function(){
+			event.innerText="clicked";
+		});
+	});
+
+
+
+
+
+
+	// var result=document.querySelectorAll("div");
+	// 	result.forEach(function(item){
+	// 	item.addEventListener("click",function(event){
+	// 		this.innerText="clicked";
+	// 	});
+	// })
+
+// for(var i=0;i<divs.length; i++){
+// 	divs[i].addEventListener("click", function(){
+// 		//이벤트가 일어난 요소의 innerText 조작
+// 		this.innerText="clicked";
+// 	});
+// }
+
+	// var result=document.querySelectorAll("div");
+	// result.forEach(function(item){
+	// 	item.addEventListener("click",function(){
+	// 		this.innerText="clicked"
+	// 	});
+	// });
+
+</script>
+</body>
+</html>

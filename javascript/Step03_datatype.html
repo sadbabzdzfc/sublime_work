@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_datatype.html</title>
+</head>
+<body>
+<script>
+	/*
+		javascript 에서 사용하는 datatype 알아보기
+	*/
+
+	//1. number type
+	var num1=10;	//int
+	var num2=10.1;	//float
+
+	//2. string type
+	var myName='김구라';
+	var yourName='해골';
+
+	//3. 참, 거짓을 나타내는 boolean type
+	var isRun=true;
+	var isWait=false;
+	var isGreater=10>5;
+
+	//4. plain object type
+	var obj={};
+
+	var mem={num:1, name:'김구라', isMan:true};
+
+	//5. array type (object)
+	var names=['김구라','해골','원숭이'];
+	var points=[100, 85, 70, 66, 55];
+	var mem2=[2,"해골",false];
+
+	//6. function type
+	var f=function(){};
+
+	var f2=function(){
+		console.log('하나');
+		console.log('두울');
+		console.log('세엣');
+	};	
+
+	//7. undefined type
+	var a;
+	var b=undefined;
+
+	console.log('javascript 가 로딩 되엇습니다');
+</script>
+<button onclick="f2()">눌러보셈</button>
+</body>
+</html>

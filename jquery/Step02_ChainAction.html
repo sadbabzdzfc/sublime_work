@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_ChainAction.html</title>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+<div>div4</div>
+<div id="one">div5</div>
+<input type="text" id="two">
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	// chain 형태로 연속 동작 가능
+	$("div").text("hello~").css("color", "red");
+	$("div").first().text("first!");
+
+	// 같은 동작명 이지만 기능이 반대인 동작이 있다.
+	$("#one").text("김구라"); // text 값 넣어주기
+	var result=$("#one").text(); // text 값 읽어오기
+
+	$("#two").val("안녕하세요"); // value 값 넣어주기
+	var result2=$("#two").val(); // value 값 읽어오기
+
+	// css background-color 의 값 넣어주기
+	$("div:last").css("background-color","#999");
+	// css background-color 의 값 읽어오기
+	var result3=$("div:last").css("background-color");
+
+
+
+</script>
+</body>
+</html>

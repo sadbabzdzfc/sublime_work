@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			background-color: yellow;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div class="box">0</div>	
+<script>
+	
+	var mLeft=0;
+	var num=0;
+	//버튼을 눌렀을때 움직이게 하기 
+	document.querySelector(".box")
+	.addEventListener("click", function(){
+		// 클릭시 증가
+		num=num+1;
+		document.querySelector(".box").innerText=num;
+		// 클릭시 이동
+		mLeft+=10;
+		document.querySelector(".box")
+		.style.marginLeft=mLeft+"px";
+	});
+
+	/*
+		위의 사각형 div 를 클릭하면 클릭할때 마다
+		10px 씩 우측으로 이동하게 javascript 를 작성해 보세요.
+
+		또한 innerText 는 div 를 클릭한 횟수가 출력되게도 해 보세요.  
+	*/
+</script>
+</body>
+</html>

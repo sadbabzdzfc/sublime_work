@@ -1,0 +1,16 @@
+name: 송예성
+add: 서울시 관악구 호암로 399
+blood: AB형
+// JSON
+{
+	"name":"이정호",
+	"addr":"아현동",
+	"blood":"O형"
+}
+// XML
+<member>
+	<name>이정호</name>
+	<addr>아현동</addr>
+	<blood>O형</blood>
+</member>
+

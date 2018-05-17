@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step15_createElem.html</title>
+</head>
+<body>
+<h3>동적으로 문서객체 만들기 테스트</h3>
+<div id="wrapper">
+	
+</div>
+<script>
+
+	// id 가 wrapper 인 div 의 참조값 얻어오기
+	var wrapper=document.querySelector("#wrapper");
+
+	//button 요소 만들기
+	var btn1=document.createElement("button");
+	btn1.innerText="버튼1";
+
+	var btn2=document.createElement("button");
+	btn2.innerText="버튼2";
+
+	//wrapper div 에 추가하기
+	wrapper.append(btn1);
+	wrapper.append(btn2);
+
+
+</script>
+</body>
+</html>

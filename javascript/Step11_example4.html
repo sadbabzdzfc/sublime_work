@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_example4.html</title>
+	<style>
+		/* 여기는 css 영역 입니다. */
+/*		#kim{
+			background-color: green; <- internal css
+			margin-left: 100px;
+		}*/ 
+	</style>
+</head>
+<body> -->
+<h3>if 문 테스트</h3>
+<button onclick="toGreen()">녹색</button><br/>
+<button onclick="toYellow()">노란색</button>
+<button onclick="toggle()">토글</button>
+<button onclick="move()">움직이기</button>
+
+<img id="kim" src="images/kim1.png" alt="김구라 이미지"/> <!-- inline css -->
+<script>
+	/*
+	1. 녹색 버튼을 눌렀을떄 이미지의 배경색을 green 으로 바꿔보세요.
+	document.querySelector("#kim").style.backgroundcolor="green"
+	*/
+
+	//색상을 저장할 변수
+	var color="green";
+	//margin-left 값을 숫자로 저장할 변수
+	var mLeft=0; // 초기 값 0부여
+	// 처음 초기값
+	document.querySelector("#kim").style.backgroundColor=color;
+
+	var toGreen=function(){
+		color="green";
+		document.querySelector("#kim").style.backgroundColor=color;
+	}
+	var toYellow=function(){
+		color="yellow";
+		document.querySelector("#kim").style.backgroundColor=color;
+	}
+	var toggle=function(){
+		if(color=="green"){
+			toYellow();
+		}else{
+			toGreen();
+		}
+		document.querySelector("#kim").style.backgroundColor=color;
+	}
+	var move=function(){
+		mLeft+=10;
+		document.querySelector("#kim").style.marginLeft=mLeft+"px";
+	}
+
+	// var move=function(){
+	// 	//margin-left 10 증가 시키기 
+	// 	mLeft=mLeft+10;
+	// 	// img 요소의 style 에 적용 시키기
+	// 	document.querySelector("#kim").style.marginLeft=mLeft+"px";
+	// };
+
+
+	// var move=function(){
+	// 	//margin-left 10 증가 시키기
+	// 	mLeft=mLeft=10;
+	// 	// img요소의 style 에 적용 시키기	
+	// 	document.querySelector("#kim").style.marginLeft=mLeft+"px";
+	// 	};
+
+
+	// 	document.querySelector("#kim").style.backgroundColor=color;
+	
+	// var toGreen = function() {
+	// 	color="green";
+	// 	document.querySelector("#kim").style.backgroundColor=color;
+	// };
+	// var toYellow = function() {
+	// 	color="yellow";
+	// 	document.querySelector("#kim").style.backgroundColor=color;
+	// };
+	// // 토글 버튼을 눌렀을때 호출되는 함수
+	// var toggle = function(){
+	// 	//만일 현재 색상이 green 이면 yellow로
+	// 	if(color=="yellow"){
+	// 		toGreen();
+	// 	} else{
+	// 		toYellow();
+	// 	};
+	// 	// 배경색에 적용하기
+	// 	document.querySelector("#kim").style.backgroundColor=color;
+	// }
+
+
+	// var a=document.querySelector("#kim").style
+	// var count = 0;
+	// var move=function(){
+	// 	if(count==count){
+	// 	count = count+10;
+	// 	a.marginLeft=count+"px";
+	// 	}
+	// };
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_function3.html</title>
+</head>
+<body>
+<h3>함수 테스트</h3>
+<script>
+	var a=function(){
+		console.log("a 함수 호출됨");
+	};
+	var b=function(){
+		console.log("b 함수 호출됨");
+		return;
+	};
+	var c=function(){
+		console.log("c 함수 호출됨");
+		return 999;
+	};
+	var d=function(){
+		console.log("d 함수 호출됨");
+		return true;
+	};
+
+	var e=function(){
+		console.log("e 함수 호출됨");
+		return {};
+	};
+
+	var f=function(){
+		console.log("f 함수 호출됨");
+		return [];
+	};
+	var g=function(){
+		console.log("g 함수 호출됨");
+		return function(){};
+	};
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step18_example5.html</title>
+</head>
+<body>
+<input type="text" id="inputNum" placeholder="번호입력" />
+<input type="text" id="inputName" placeholder="이름입력" />
+<input type="text" id="inputAddr" placeholder="주소입력" />
+<button id="saveBtn">저장</button>
+<button id="loadBtn">목록보기</button>
+<button id="deleteBtn">삭제하기</button>
+<ul id="memberList">
+	<li>번호: 0 이름:아무게 주소:어디게</li>
+</ul>
+<script>
+		if(localStorage.jsonList == undefined){ //localStorage = 문자열만 저장가능한 plain object 영구저장
+		localStorage.jsonList='[]';
+	}
+
+	document.querySelector("#saveBtn")
+	.addEventListener("click",function(){
+		jsList=JSON.parse(localStorage.jsonList)
+		var num=document.querySelector("#inputNum").value;
+		var name=document.querySelector("#inputName").value;
+		var addr=document.querySelector("#inputAddr").value;
+		var member={num:num,name:name,addr:addr};
+		jsList.push(member);
+		localStorage.jsonList=JSON.stringify(jsList);
+	});
+
+	document.querySelector("#loadBtn")
+	.addEventListener('click',function(){
+		document.querySelector("#memberList").innerText="";
+		jsList=JSON.parse(localStorage.jsonList);
+		for(var i=0;i<jsList.length;i++){			
+		var li=document.createElement("li");
+		li.innerText=" 번호:"+jsList[i].num+" 이름:"+jsList[i].name+" 주소:"+jsList[i].addr;
+		document.querySelector("#memberList").append(li);
+		}
+	});
+
+	document.querySelector("#deleteBtn")
+	.addEventListener("click",function(){
+		localStorage.jsonList="[]";
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// document.querySelector("#saveBtn")
+	// .addEventListener("click",function(){
+	// 	var arr=JSON.parse(localStorage.jsonList);
+	// 	var member={};
+	// 	var num=document.querySelector("#inputNum").value;
+	// 	var name=document.querySelector("#inputName").value;
+	// 	var addr=document.querySelector("#inputAddr").value;
+	// 	member.nums=num;
+	// 	member.names=name;
+	// 	member.addrs=addr;
+	// 	// var member{num:num, name:name};
+	// 	arr.push(member);
+	// 	localStorage.jsonList=JSON.stringify(arr);
+	// });
+
+	// document.querySelector("#loadBtn")
+	// .addEventListener("click",function(){
+
+	// 	// ul 의 자식요소를 모두 삭제후
+	// 	document.querySelector("#memberList").innerText="";
+
+	// 	var arr=JSON.parse(localStorage.jsonList);
+	// 	for(var i=0;i<arr.length;i++){
+	// 		var li=document.createElement("li");
+	// 			li.innerText="번호: "+arr[i].nums+"이름: "+arr[i].names+"주소: "+arr[i].addrs;
+	// 			document.querySelector("#memberList").append(li);
+	// 	}
+	// });
+
+	// document.querySelector("#deleteBtn")
+	// .addEventListener("click", function(){
+	// 	localStorage.jsonList="[]";
+	// 	document.querySelector("#memberList").innerText="";
+	// })
+
+
+
+
+
+
+
+	// document.querySelector("#saveBtn")
+	// .addEventListener("click",function(){
+	// 	var arr=JSON.parse(localStorage.jsonList);
+	// 	var mem={};
+	// 	mem.num=document.querySelector("#inputNum").value;
+	// 	mem.name=document.querySelector("#inputName").value;
+	// 	mem.addr=document.querySelector("#inputAddr").value;
+	// 		arr.push(mem);
+	// 		localStorage.jsonList=JSON.stringify(arr);
+	// });
+	// document.querySelector("#loadBtn")
+	// .addEventListener("click",function(){
+	// 	var arr=JSON.parse(localStorage.jsonList);
+	// 	for(var i=0;i<arr.length;i++){
+	// 		var li=document.createElement("li");
+	// 		li.innerText="번호: "+arr[i].num+"이름: "+arr[i].name+"주소: "+arr[i].addr;
+	// 		document.querySelector("#memberList").append(li);
+	// 	}
+	// });
+</script>
+</body>
+</html>
