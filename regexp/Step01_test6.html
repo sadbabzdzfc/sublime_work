@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_test6.html</title>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="검증할 문자열 입력" />
+<p id="checkResult"></p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	
+	/*
+		반드시 영문자 소문자로 시작 
+		특수문자 허용하지 않음
+		최소 5글자 최대10글자
+	*/
+	var reg=/^[a-z][\w]{4,9}$/;
+
+	$("#inputStr").keyup(function(){
+		var str=$("#inputStr").val();
+		var result=reg.test(str);
+		if(result){
+			$("#checkResult").text("잘 입력했습니다.");
+		}else{
+			$("#checkResult").text("반드시 영문자 소문자로 시작,특수문자 허용하지 않음, 최소 5글자 최대10글자");
+		}
+	});
+</script>	
+</body>
+</html>

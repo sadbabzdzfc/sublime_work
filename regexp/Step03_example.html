@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_example.html</title>
+	<style>
+		.comment{
+			color: red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="검증할 문자열 입력" />	
+<p class="comment" id="comment1">첫글자를 소문자로 입력하세요</p>
+<p class="comment" id="comment2">최소 5글자 최대10글자 이내로 입력하세요</p>
+<p class="comment" id="comment3">특수문자는 허용하지 않습니다.</p>
+<p class="comment" id="comment4">숫자를 한개 이상 입력하세요.</p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	
+	var reg1=/^[a-z]/;
+	var reg2=/^.{5,10}$/;
+	var reg3=/^[\w]+$/;
+	var reg4=/[0-9]/;
+
+	$("#inputStr").keyup(function(){
+		//검증할 문자열을 읽어와서 
+		var str=$("#inputStr").val();
+
+		//일단 모든 comment 를 보이지 않게 하고
+		$(".comment").hide();
+
+		//조건부로 해당 comment 만 보이게 한다.
+		if(reg1.test(str)==false){
+			$("#comment1").show();
+		}
+		if(reg2.test(str)==false){
+			$("#comment2").show();
+		}
+		if(reg3.test(str)==false){
+			$("#comment3").show();
+		}
+		if(reg4.test(str)==false){
+			$("#comment4").show();
+		}
+	});
+</script>
+</body>
+</html>

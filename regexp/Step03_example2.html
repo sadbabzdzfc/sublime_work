@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step03_example2.html</title>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="핸드폰 번호 입력" />
+<p id="checkResult"></p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	/*
+		핸드폰 번호 형식
+
+		xxx-xxxx-xxxx
+	*/
+	var reg=/^01[016789]-[0-9]{4}-[0-9]{4}$/;
+
+	// 핸드폰 번호를 검증할 정규 표현식
+	$("#inputStr").keyup(function(){
+		//입력한 문자열 읽어오기
+		var str=$("#inputStr").val();
+		var result=reg.test(str);
+		if(result){
+			$("#checkResult").text("");
+		}else{
+			$("#checkResult").text("핸드폰 번호 형식에 맞게 입력하세요.")
+		}
+	});
+</script>
+</body>
+</html>

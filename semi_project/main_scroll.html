@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>main_scroll.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		/* 컨텐츠가 .nav 에 가려 지지 않도록 padding 부여 */
+		body{
+			padding-top: 50px;
+			margin-top: 0;
+		}	
+		.spacer{
+			height: 500px;
+			background-color: #999;
+		}
+		/* .nav 를 좌상단 고정된 위치에 배치 */
+		.nav{
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: #777;
+			width: 100%;
+			height: 50px;
+		}
+		/*ul 의 기본 스타일 제거*/
+		.nav ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		/*li 를 가로 배치 하고 좌우 padding 부여*/
+		.nav ul li{
+			float: left;
+			padding: 0 20px;
+		}
+		.row{ 
+			border: 1px dotted blue;
+		}
+		.row > div{
+			border: 1px solid orange;
+		}
+		#mainBottom{
+			background-color: #eee;
+		}
+		ul li{
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+<div class="nav">
+	<ul>
+		<li><a class="active" href="#refrigerator">refrigerator</a></li>
+		<li><a href="#phone">phone</a></li>
+		<li><a href="#computer">computer</a></li>
+		<li><a href="#audio">audio</a></li>
+		<li><a href="#memory">memory</a></li>
+	</ul>
+</div>
+<div class="spacer"></div>
+<p id="refrigerator"><strong>refrigerator</strong></p>
+<div class="spacer"></div>
+<p id="phone"><strong>phone</strong></p>
+<div class="spacer"></div>
+<p id="computer"><strong>computer</strong></p>
+<div class="spacer"></div>
+<p id="audio"><strong>audio</strong></p>
+<div class="spacer"></div>
+<p id="memory"><strong>memory</strong></p>
+<div class="spacer"></div>
+<div id="mainBottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1">gd</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<ul class="col-md-2">쇼핑 및 알아보기
+				<li><a href="#">Mac</a></li>
+				<li>iPad</li>
+				<li>iPhone</li>
+				<li>Watch</li>
+				<li>Music</li>
+				<li>iTunes</li>
+				<li>iPod touch</li>
+				<li>액세서리</li>
+			</ul>
+			<div class="col-md-2">Apple Store</div>
+			<div class="col-md-2">교육</div>
+			<div class="col-md-2">계정</div>
+			<div class="col-md-2">Apple 정보</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>>
+<script>
+	$(".nav a").smoothScroll({
+		offset: -50,
+		speed: 1000,
+		afterScroll: function(){
+			//모든 a 요소의 active 클래스 제거
+			$(".nav a").removeClass("active");
+			//클릭한 a 요소에 active 클래스 추가
+			$(this).addClass("active");
+		}
+	});
+</script>
+</body>
+</html>

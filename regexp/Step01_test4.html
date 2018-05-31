@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_test4.html</title>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="검증할 문자열 입력" />
+<button id="checkBtn">검증</button>
+<p id="checkResult"></p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	
+	//검증할 정규 표현식
+
+	//특수 문자를 허용하지 않는 정규 표현식  
+	//var reg=/^[a-zA-Z0-9]+$/;
+	
+	// [a-zA-Z0-9] 는 [\w] 와 같다 
+	var reg=/^[\w]+$/;
+
+	/*
+		[a-zA-Z0-9] == [\w]
+
+		[^a-zA-Z0-9] == [^\w] == [\W]
+	*/
+
+	$("#checkBtn").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg.test(str);
+		if(result){
+			$("#checkResult").text("잘 입력했습니다.");
+		}else{
+			$("#checkResult").text("특수문자를 허용하지 않습니다.");
+		}
+	});
+</script>	
+</body>
+</html>

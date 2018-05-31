@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_test5.html</title>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="한글만 입력" />
+<button id="checkBtn">검증</button>
+<p id="checkResult"></p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	
+	//검증할 정규 표현식
+	var reg=/^[가-힇]+$/;
+
+	$("#checkBtn").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg.test(str);
+		if(result){
+			$("#checkResult").text("잘 입력했습니다.");
+		}else{
+			$("#checkResult").text("한글만 입력하세요.");
+		}
+	});
+</script>	
+</body>
+</html>

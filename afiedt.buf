@@ -1,0 +1,4 @@
+SELECT e1.ename, e2.ename
+FROM emp e1,emp e2
+WHERE e1.mgr=e2.empno
+/

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_test.html</title>
+</head>
+<body>
+<script>
+	var str="My name is kimgura!";
+	// 정규 표현식 객체 
+	var reg=/kim/;
+
+	/*
+		정규 표현식 객체의 .test() 함수를 호출하면서 
+		검증할 문자열을 전달하면 boolean type 이 리턴된다.
+
+		true 가 리턴되면 first 매칭이 존재하는 거고
+		false 가 리턴되면 first 매칭이 존재하지 않는 것이다. 
+	*/
+	var result=reg.test(str);
+</script>	
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MouseWheel</title>
+    <style type="text/css">
+        html,body{
+            margin:0; padding:0; width:100%; height:100%;
+        }
+        .box{
+            width:100%; height:100%;  color:#ffffff; font-size:24pt;
+        }
+        .box2{
+            width: 100%; height: 20%
+        }
+        #mainBottom{
+            width: 100%; height: 20%;
+        }
+        .nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #777;
+            width: 100%;
+            height: 50px;
+        }
+        /*ul 의 기본 스타일 제거*/
+        .nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        /*li 를 가로 배치 하고 좌우 padding 부여*/
+        .nav ul li{
+            float: left;
+            padding: 0 20px;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery.smooth-scroll.js"></script>>
+    <script type="text/javascript">
+        window.onload = function () {
+            $(".box, .box2").each(function () {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("wheel", function (e) {
+                    console.log(e);
+                    e.preventDefault();
+                    var mouseWheelScrollY = 0;
+                    // if (!event) event = window.event;
+                    if (event.wheelDeltaY) {
+                    	console.log("wheelDeltaY:"+event.wheelDeltaY);
+                        mouseWheelScrollY = event.wheelDeltaY / 120;
+                            // if (window.opera) delta = -delta;
+                        }
+                    // }   else if (event.detail) delta = -event.detail / 3;
+                    var moveTop = null;
+                    var moveControl=-50;
+                    // 마우스휠을 위에서 아래로
+                    if (mouseWheelScrollY < 0) {
+                        if ($(this).next() != undefined) {
+                        	console.log("mouseWheelScrollY:"+mouseWheelScrollY);
+                            moveTop = $(this).next().offset().top;
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(this).prev() != undefined) {
+                        	console.log("mouseWheelScrollY:"+mouseWheelScrollY);
+                            moveTop = $(this).prev().offset().top;
+                        }
+                    }
+                    console.log("moveTop:"+moveTop);
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + moveControl + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a class="active" href="#refrigerator">refrigerator</a></li>
+        <li><a href="#phone">phone</a></li>
+        <li><a href="#computer">computer</a></li>
+        <li><a href="#audio">audio</a></li>
+        <li><a href="#memory">memory</a></li>
+    </ul>
+</div>
+    <div>8</div>
+    <div id="refrigerator" class="box" style="background-color:red;">1</div>
+    <div id="phone" class="box" style="background-color:orange;">2</div>
+    <div id="computer" class="box" style="background-color:yellow;">3</div>
+    <div id="audio" class="box" style="background-color:green;">4</div>
+    <div id="memory" class="box" style="background-color:blue;">5</div>
+    <div class="box2">8</div>
+    <div class="box" style="background-color:blue;">5</div>
+</body>
+<script>
+    $(".nav a").smoothScroll({
+        offset: -50,
+        speed: 1000,
+        afterScroll: function(){
+            //모든 a 요소의 active 클래스 제거
+            $(".nav a").removeClass("active");
+            //클릭한 a 요소에 active 클래스 추가
+            $(this).addClass("active");
+        }
+    });
+</script>
+</html>

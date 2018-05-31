@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step04_formValidation.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h3>회원가입 폼입니다.</h3>
+	<form action="signup" id="myForm">
+		<div class="form-group has-error has-feedback">
+			<label for="id" class="control-label">아이디</label>
+			<input type="text" class="form-control" id="id" />
+			<span class="glyphicon glyphicon-remove form-control-feedback" id="idImg"></span>
+			<p class="passId help-block" id="passId1">특수 문자는 허용하지 않습니다.</p>
+			<p class="passId help-block" id="passId2">영문자로 시작하세요.</p>
+			<p class="passId help-block" id="passId3">최소 5글자 최대 10글자 이내로 입력하세요.</p>
+		</div>
+		<div class="form-group has-error has-feedback">
+			<label for="email" class="control-label">이메일</label>
+			<input type="text" class="form-control" id="email" />
+			<span class="glyphicon glyphicon-remove form-control-feedback" id="emailImg"></span>
+			<p class="help-block" id="emailMsg">이메일 형식에 맞게 입력하세요.</p>
+		</div>
+		<div class="form-group has-error has-feedback">
+			<label for="pwd1" class="control-label">비밀번호</label>
+			<input type="password" class="form-control" id="pwd1" />
+			<span class="glyphicon glyphicon-remove form-control-feedback" id="pwdImg1"></span>
+			<p class="pwdPass help-block" id="pwdPass1">아래와 동일한지 비밀번호를 확인하세요</p>
+			<p class="pwdPass help-block" id="pwdPass2">영문자와 숫자의 조합으로 비밀번호를 작성하세요.</p>
+		</div>
+		<div class="form-group has-error has-feedback">
+			<label for="pwd2" class="control-label">비밀번호 확인</label>
+			<input type="password" class="form-control" id="pwd2" />
+			<span class="glyphicon glyphicon-remove form-control-feedback" id=pwdImg2></span>
+		</div>
+		<button class="btn btn-primary" type="submit">가입</button>
+	</form>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	var reg1=/^[\w]+$/;
+	var reg2=/^[a-zA-Z]/;
+	var reg3=/^.{5,10}$/;
+
+	$("#id").keyup(function(){
+		//검증할 문자열을 읽어와서 
+		var idPass1=true;
+		var idPass2=true;
+		var idPass3=true;
+		var str=$("#id").val();
+
+		//일단 모든 comment 를 보이지 않게 하고
+		$(".passId").hide();
+		//조건부로 해당 comment 만 보이게 한다.
+		if(reg1.test(str)==false){
+			$("#passId1").show();
+			idPass1=false;
+		}
+		if(reg2.test(str)==false){
+			$("#passId2").show();
+			idPass2=false;
+		}
+		if(reg3.test(str)==false){
+			$("#passId3").show();
+			idPass3=false;
+		}
+		if(idPass1==true&&idPass2==true&&idPass3==true){
+			$("#id")
+			.parent()
+			.removeClass("has-error")
+			.addClass("has-success")
+			$("#idImg")
+			.removeClass("glyphicon-remove")
+			.addClass("glyphicon-ok")
+		}else{
+			$("#id")
+			.parent()
+			.addClass("has-error")
+			.removeClass("has-success")
+			$("#idImg")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok")
+		}
+	});
+	var reg=/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
+	
+	$("#email").keyup(function(){
+		//입력한 문자열 읽어오기 
+		var str=$(this).val();
+		var result=reg.test(str);
+		if(result){
+			$("#emailMsg")
+			.text("")
+			.parent()
+			.removeClass("has-error")
+			.addClass("has-success")
+			$("#emailImg")
+			.addClass("glyphicon-ok")
+			.removeClass("glyphicon-remove");
+		}else{
+			$("#emailMsg")
+			.text("이메일 형식에 맞게 입력하세요.")
+			.parent()
+			.addClass("has-error")
+			.removeClass("has-success")
+			$("#emailImg")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok");
+		}
+	});
+	var reg2=false;
+	var savePwd;
+	var isSave=false;
+	var savePwd2;
+
+	$("#pwd1").keyup(function(){
+		var str=$(this).val();
+		savePwd=str;
+		var reg1=/^[\w]{2,}$/; 
+		var reg3=/[a-zA-Z]/;
+		var reg4=/[0-9]/;
+
+		if(reg1.test(str)==true&&reg3.test(str)&&reg4.test(str)){
+			$(this)
+			.parent()
+			.removeClass("has-error")
+			.addClass("has-success")
+			$("#pwdPass2")
+			.text("")
+			$("#pwd2").parent().removeClass("has-error");
+			$("#pwd2").parent().addClass("has-success");
+		}else{
+			$(this)
+			.parent()
+			.addClass("has-error")
+			.removeClass("has-success")
+			$("#pwdPass2")
+			.text("영문자와 숫자의 조합으로 비밀번호를 작성하세요.")
+			$("#pwdImg1")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok")
+			$("#pwd2").parent().addClass("has-error");
+			$("#pwd2").parent().removeClass("has-success");
+		}
+		if(savePwd2==str){
+			$("#pwd2").parent().removeClass("has-error");
+			$("#pwd2").parent().addClass("has-success");
+			$("#pwd1").parent().removeClass("has-error");
+			$("#pwd1").parent().addClass("has-success");
+			$("#pwdImg1")
+			.addClass("glyphicon-ok")
+			.removeClass("glyphicon-remove")
+		}else{
+			$("#pwd2").parent().addClass("has-error");
+			$("#pwd2").parent().removeClass("has-success");
+			$("#pwd1").parent().addClass("has-error");
+			$("#pwd1").parent().removeClass("has-success");
+			$("#pwdImg1")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok")
+		}
+	});
+	$("#pwd2").keyup(function(){
+		var str=$(this).val();
+		savePwd2=str;
+		if(savePwd==str){
+			$(this)
+			.parent()
+			.removeClass("has-error")
+			.addClass("has-success")
+			$("#pwdImg2")
+			.removeClass("glyphicon-remove")
+			.addClass("glyphicon-ok")
+			isSave=true;
+			if(isSave==true){
+				$("#pwdPass1")
+				.text("")
+			}else{
+				$("#pwdPass1")
+				.text("아래와 동일한지 비밀번호를 확인하세요")
+				isSave=false;
+			}
+			$("#pwd1").parent().removeClass("has-error");
+			$("#pwd1").parent().addClass("has-success");
+			$("#pwdImg1")
+			.addClass("glyphicon-ok")
+			.removeClass("glyphicon-remove");
+		}else{
+			$(this)
+			.parent()
+			.addClass("has-error");
+			$("#pwdImg2")
+			.removeClass("has-success")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok");
+			isSave=false;
+			$("#pwdPass1")
+			.text("아래와 동일한지 비밀번호를 확인하세요");
+			$("#pwd1").parent().addClass("has-error");
+			$("#pwd1").parent().removeClass("has-success");
+			$("#pwdImg1")
+			.addClass("glyphicon-remove")
+			.removeClass("glyphicon-ok");
+		}
+	});
+</script>	
+</body>
+</html>

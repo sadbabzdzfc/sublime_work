@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_exec.html</title>
+</head>
+<body>
+<script>
+	var str="@abc#$#abc%abc+abc~";
+	//특수문자 1글자를 검증하는 정규 표현식
+	var reg=/[\W]/g; // g 는 global 매칭 
+
+	//break 를 만날때 까지 무한 반복하는 반복문
+	while(true){
+		//result 는 매칭되는게 있으면 [] 이고 없으면 null 이다.
+		var result=reg.exec(str);
+		if(result==null){//null 이 리턴되면 
+			break;//반복문 탈출 
+		}
+		//배열의 0번 방에 매칭되는 문자열이 들어있다.
+		console.log(result[0]);
+	}
+</script>	
+</body>
+</html>

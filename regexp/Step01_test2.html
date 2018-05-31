@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step01_test2.html</title>
+</head>
+<body>
+<input type="text" id="inputStr" placeholder="검증할 문자열..." />
+<button id="checkBtn">[a-z] 검증</button>
+<button id="checkBtn2">^[a-z] 검증</button>
+<button id="checkBtn3">[a-z]$ 검증</button>
+<button id="checkBtn4">^[a-z]$ 검증</button>
+<p id="checkResult"></p>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+	/*
+		[a-z]  는 영문자 소문자 한글자를 의미한다.
+
+		^ 는 시작을 의미한다.
+		$ 는 끝을 의미한다. 
+	*/
+	//검증할 정규 표현식
+	var reg=/[a-z]/;
+	var reg2=/^[a-z]/;
+	var reg3=/[a-z]$/;
+	var reg4=/^[a-z]$/;
+
+	$("#checkBtn").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg.test(str);
+		$("#checkResult").text(result);
+	});
+	$("#checkBtn2").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg2.test(str);
+		$("#checkResult").text(result);
+	});
+	$("#checkBtn3").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg3.test(str);
+		$("#checkResult").text(result);
+	});
+	$("#checkBtn4").click(function(){
+		var str=$("#inputStr").val();
+		var result=reg4.test(str);
+		$("#checkResult").text(result);
+	});
+</script>	
+</body>
+</html>
