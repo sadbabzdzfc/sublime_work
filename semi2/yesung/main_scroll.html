@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>main_scroll.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		/* 컨텐츠가 .nav 에 가려 지지 않도록 padding 부여 */
+		body{
+			padding: 0px;
+			margin: 0;
+		}	
+		/*body .productIteclass
+			//margin-top: 154px;
+			height: 680px;
+			background-color: red;
+			background-image: url("images/s9.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}*/
+		#refrigeratorRef{
+			margin-top: 154px;
+		}
+		#refrigerator{
+			/*margin-top: 154px;*/
+			height: 680px;
+			background-color: skyblue;
+			background-image: url("images/rg3.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}
+		#phone{
+			/*margin-top: 154px;*/
+			height: 680px;
+			background-color: red;
+			background-image: url("images/s9.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}
+		#computer{
+			/*margin-top: 154px;*/
+			height: 680px;
+			background-color: gray;
+			background-image: url("images/tv1.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}
+		#audio{
+			/*margin-top: 154px;*/
+			height: 680px;
+			background-color: purple;
+			background-image: url("images/au1.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}
+		#memory{
+			/*margin-top: 154px;*/
+			height: 680px;
+			background-color: brown;
+			background-image: url("images/me1.png");
+			opacity: 0.85;
+			background-repeat: no-repeat;
+		}
+
+		#mainBottom, #mainBottom2{
+			background-color: #eee;
+		}
+		ul li{
+			list-style-type: none;
+		}
+		.panel ul li a{
+			text-decoration: none;
+			color:gray;
+			margin-left: 20px;
+			border: none;
+		}
+		.panel ul a:hover{
+			text-decoration: underline;
+			color:gray;
+		}
+		.productSubItem1-1{
+			float: left;
+			width: 60%;
+			/*border: 1px solid green;*/
+		}
+		.productSubItem1-2{
+			margin-top:110px; 
+			display: inline-block; 
+			width: 40%;
+			/*border: 1px solid green; */
+			font-color: white;
+		}
+		.productSubItem2-1{
+			float: left;
+			width: 60%; 
+			/*border: 1px solid green;*/
+		}
+		.productSubItem2-2{
+			display: inline-block; 
+			margin-left: 1100px; 
+			margin-top: 50px;
+		}
+		#phone_detail{
+			border-radius: 50px; 
+			display: inline-block; 
+			width: 200px;
+			height: 50px; 
+			border: 1px solid white; 
+			margin: 0px auto;
+			padding: 18px 60px; 
+			text-decoration: none; 
+			color:white;
+		}
+		#phone_detail:hover{
+			color: green;
+
+		}
+		#phone_detail_1{
+			border-radius: 50px; 
+			display: inline-block; 
+			width: 200px;
+			height: 50px; 
+			border: 1px solid black; 
+			margin: 0px auto;
+			padding: 18px 60px; 
+			text-decoration: none; 
+			color:black;
+		}
+		#phone_detail_1:hover{
+			color: red;
+
+		}
+	</style>
+</head>
+<body>
+<div class="nav">
+	<ul>
+		<li><a class="active" href="#refrigeratorRef">refrigerator</a></li>
+		<li><a href="#phone">phone</a></li>
+		<li><a href="#computer">computer</a></li>
+		<li><a href="#audio">audio</a></li>
+		<li><a href="#memory">memory</a></li>
+	</ul>
+</div>
+<p id="refrigeratorRef"><strong>refrigerator</strong></p>
+<div id="refrigerator" class="productItem">
+	<div class="productSubItem1-1">&nbsp;</div>
+	<div class="productSubItem1-2"><span style="font-size: 45px; color: black; text-shadow: 5px 5px 15px 5px;">2018 NEW<br/>식재료 수납의 정석</span><br/><span style="font-size: 25px; color: black;">아이의 마음을 표현하는 창이 되고, 
+무뚝뚝한 아빠를 셰프급 요리사로 만들어줍니다.
+냉장고 그 이상의 의미를 주는 패밀리허브로 
+당신의 주방을 행복이 가득한 공간으로 완성해보세요.</span></div>
+	<div class="productSubItem2-1"></div>
+	<div class="productSubItem2-2"><a id="phone_detail_1" href='http://www.google.com'>자세히 보기</a></div>
+</div>
+
+<p id="phoneRef"><strong>phone</strong></p>
+<div id="phone">
+	<div class="productSubItem1-1">&nbsp;</div>
+	<div class="productSubItem1-2"><span style="font-size: 45px; color: white; text-shadow: 5px 5px 15px 5px;">Galaxy S9|S9+의<br/>새로운 시즌, 그 강렬한 시작</span><br/><span style="font-size: 25px; color: white;">Galaxy S9|S9+ NEW Color 출시 기념</span></div>
+	<div class="productSubItem2-1"></div>
+	<div class="productSubItem2-2"><a id="phone_detail" href='http://www.google.com'>자세히 보기</a></div>
+</div>
+
+<p id="computerRef"><strong>computer</strong></p>
+<div id="computer">
+	<div class="productSubItem1-1">&nbsp;</div>
+	<div class="productSubItem1-2"><span style="font-size: 45px; color: white; text-shadow: 5px 5px 15px 5px;">2018 QLED TV<br/>보이는 것 이상의 감동, 100% TV</span><br/><span style="font-size: 25px; color: white;">오랜 시간 경험하는 새로운 차원의 라이프스타일</span></div>
+	<div class="productSubItem2-1"></div>
+	<div class="productSubItem2-2"><a id="phone_detail" href='http://www.google.com'>자세히 보기</a></div>
+</div>
+
+<p id="audioRef"><strong>audio</strong></p>
+<div id="audio">
+	<div class="productSubItem1-1">&nbsp;</div>
+	<div class="productSubItem1-2"><span style="font-size: 45px; color: white; text-shadow: 5px 5px 15px 5px;">세련된 디자인에 <br/>고품격 사운드</span><br/><span style="font-size: 25px; color: white;">원바디 사운드바</span></div>
+	<div class="productSubItem2-1"></div>
+	<div class="productSubItem2-2"><a id="phone_detail" href='http://www.google.com'>자세히 보기</a></div>
+</div>
+
+<p id="memoryRef"><strong>memory</strong></p>
+<div id="memory">
+	<div class="productSubItem1-1">&nbsp;</div>
+	<div class="productSubItem1-2"><span style="font-size: 45px; color: white; text-shadow: 5px 5px 15px 5px;">2018년형 도시바 외장하드<br/>아름다움 속에 감춰진</span><br/><span style="font-size: 25px; color: white;">나만의 공간</span></div>
+	<div class="productSubItem2-1"></div>
+	<div class="productSubItem2-2"><a id="phone_detail" href='http://www.google.com'>자세히 보기</a></div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script>
+	$(".nav a").smoothScroll({
+		offset: -150,
+		speed: 1000,
+		afterScroll: function(){
+			//모든 a 요소의 active 클래스 제거
+			$(".nav a").removeClass("active");
+			//클릭한 a 요소에 active 클래스 추가
+			$(this).addClass("active");
+		}
+	});
+</script>
+</body>
+</html>
